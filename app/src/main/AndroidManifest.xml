@@ -4,13 +4,28 @@
 
     <application
         android:allowBackup="true"
-        android:dataExtractionRules="@xml/data_extraction_rules"
-        android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.BrightFuture"
-        tools:targetApi="31" />
+        android:theme="@style/Theme.AppCompat">
 
+        <!-- SplashActivity is the entry point and the only activity with LAUNCHER intent -->
+        <activity android:name=".auth.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- LoginActivity does not need to be exported or have a MAIN intent filter -->
+        <activity android:name=".auth.LoginActivity"
+            android:exported="false" />
+
+        <!-- RegistrationActivity does not need to be exported -->
+        <activity android:name=".auth.RegistrationActivity"
+            android:exported="false" />
+
+    </application>
 </manifest>
