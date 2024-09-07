@@ -6,5 +6,20 @@
     <string name="register">Register</string>
     <string name="email">Email</string>
     <string name="name">Name</string>
+    <string name="signup">Sign Up</string>
+    <string name="alreadyAnUser">Already an user ? Login</string>
+    <string name="notYetRegistered">Not Yet Registered ? Sign Up</string>
+    <string name="confirmPassword">Confirm Password</string>
+    <string name="emptyEmail">Email cannot be Empty</string>
+    <string name="validEmail">Please Enter Valid Email</string>
+    <string name="emptyPass">Password Cannot be Empty</string>
+    <string name="passwordsDoNotMatch">Passwords do not match</string>
+    <string name="signUpSuccessful">SignUp Successful</string>
+    <string name="signUpFailed">SignUp Failed</string>
+    <string name="loginSuccessful">Login Successful</string>
+    <string name="loginFailed">Login Failed</string>
+    <string name="home">Home</string>
+    <string name="X">After 10th</string>
+    <string name="XII">After 12th</string>
     <string name="NeverStopLearningBecauseLifeNeverStopTeaching">Never Stop Learning Because Life Never Stop Teaching</string>
 </resources>
