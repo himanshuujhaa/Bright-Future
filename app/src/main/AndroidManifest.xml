@@ -30,5 +30,19 @@
         <activity android:name=".MainActivity"
             android:exported="true" />
 
+<!--        <activity android:name=".X.XActivity" />-->
+
+        <activity android:name=".X.XActivity"
+            android:exported="true"/>
+
+        <activity android:name=".X.XmarksActivity"
+            android:exported="true"/>
+
+        <activity android:name=".X.DocumentUpload"
+            android:exported="true"/>
+
+        <activity android:name=".XII.XIIActivity"
+            android:exported="true"/>
+
     </application>
 </manifest>

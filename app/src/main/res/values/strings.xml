@@ -21,5 +21,33 @@
     <string name="home">Home</string>
     <string name="X">After 10th</string>
     <string name="XII">After 12th</string>
+    <string name="yourDetails">Your Details</string>
+    <string name="yourCourse">Your Course</string>
+    <string name="yourMarks">Your Marks</string>
+    <string name="yourName">Enter Your Name</string>
+    <string name="yourMobile">Entre Your Mobile no.</string>
+    <string name="yourWhatsAppNo">Enter your WhatsApp no.</string>
+    <string name="yourHobby">Enter your Hobby</string>
+    <string name="reset">Reset</string>
+    <string name="next">Next</string>
+    <string name="maths">Mathematics</string>
+    <string name="gujarati">Gujarati</string>
+    <string name="hindi_sans">Hindi/Sanskrit</string>
+    <string name="science">Science</string>
+    <string name="socialscience">Social Science</string>
+    <string name="english">English</string>
+    <string name="defaultMarks">00</string>
+    <string name="uploadDocuments">Documents</string>
+    <string name="MarksheetX">10th Marksheet</string>
+    <string name="MarksheetIX">9th Marksheet</string>
+    <string name="MarksheetXII">12th Marksheet</string>
+    <string name="MarksheetXI">11th Marksheet</string>
     <string name="NeverStopLearningBecauseLifeNeverStopTeaching">Never Stop Learning Because Life Never Stop Teaching</string>
+
+    <string-array name="stream_array">
+        <item>Science</item>
+        <item>Commerce</item>
+        <item>Arts</item>
+    </string-array>
+
 </resources>
