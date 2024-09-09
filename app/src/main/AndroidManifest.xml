@@ -44,5 +44,18 @@
         <activity android:name=".XII.XIIActivity"
             android:exported="true"/>
 
+        <activity android:name=".XII.XIICourse"
+            android:exported="true"/>
+
+        <activity android:name=".XII.science.ScienceActivity"
+            android:exported="true"/>
+
+        <activity android:name=".XII.commerce.CommerceActivity"
+            android:exported="true"/>
+
+        <activity android:name=".XII.arts.ArtsActivity"
+            android:exported="true"/>
+
+
     </application>
 </manifest>

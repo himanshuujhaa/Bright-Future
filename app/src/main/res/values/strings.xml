@@ -42,9 +42,11 @@
     <string name="MarksheetIX">9th Marksheet</string>
     <string name="MarksheetXII">12th Marksheet</string>
     <string name="MarksheetXI">11th Marksheet</string>
+    <string name="selectCourse">Select Your Course</string>
     <string name="NeverStopLearningBecauseLifeNeverStopTeaching">Never Stop Learning Because Life Never Stop Teaching</string>
 
     <string-array name="stream_array">
+        <item>Select Your Course</item>
         <item>Science</item>
         <item>Commerce</item>
         <item>Arts</item>

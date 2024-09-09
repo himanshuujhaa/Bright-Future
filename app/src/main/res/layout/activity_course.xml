@@ -40,62 +40,10 @@
                 android:layout_height="50dp"
                 android:entries="@array/stream_array"
                 android:layout_marginTop="40dp"
-                android:hint="@string/yourName"
-                android:textColorHint="@color/lavender"
+                android:hint="@string/selectCourse"
                 android:background="@drawable/custom_edit_text"
+                android:backgroundTint="@color/lavender"
                 android:spinnerMode="dropdown" />
-
-<!--            <EditText-->
-<!--                android:id="@+id/name"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="50dp"-->
-<!--                android:layout_marginTop="40dp"-->
-<!--                android:background="@drawable/custom_edit_text"-->
-<!--                android:drawablePadding="8dp"-->
-<!--                android:hint="@string/yourName"-->
-<!--                android:inputType="text"-->
-<!--                android:padding="8dp"-->
-<!--                android:textColor="@color/black"-->
-<!--                android:textColorHint="@color/lavender" />-->
-
-<!--            <EditText-->
-<!--                android:id="@+id/MobileNo"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="50dp"-->
-<!--                android:layout_marginTop="20dp"-->
-<!--                android:background="@drawable/custom_edit_text"-->
-<!--                android:drawablePadding="8dp"-->
-<!--                android:hint="@string/yourMobile"-->
-<!--                android:inputType="number"-->
-<!--                android:padding="8dp"-->
-<!--                android:textColor="@color/black"-->
-<!--                android:textColorHint="@color/lavender" />-->
-
-<!--            <EditText-->
-<!--                android:id="@+id/whatsAppNo"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="50dp"-->
-<!--                android:layout_marginTop="20dp"-->
-<!--                android:background="@drawable/custom_edit_text"-->
-<!--                android:drawablePadding="8dp"-->
-<!--                android:hint="@string/yourWhatsAppNo"-->
-<!--                android:inputType="number"-->
-<!--                android:padding="8dp"-->
-<!--                android:textColor="@color/black"-->
-<!--                android:textColorHint="@color/lavender" />-->
-
-<!--            <EditText-->
-<!--                android:id="@+id/hobby"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="50dp"-->
-<!--                android:layout_marginTop="20dp"-->
-<!--                android:background="@drawable/custom_edit_text"-->
-<!--                android:drawablePadding="8dp"-->
-<!--                android:hint="@string/yourHobby"-->
-<!--                android:inputType="text"-->
-<!--                android:padding="8dp"-->
-<!--                android:textColor="@color/black"-->
-<!--                android:textColorHint="@color/lavender" />-->
 
             <!-- New Horizontal LinearLayout for buttons -->
             <LinearLayout
