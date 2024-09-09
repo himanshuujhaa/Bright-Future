@@ -23,6 +23,7 @@
     <string name="XII">After 12th</string>
     <string name="yourDetails">Your Details</string>
     <string name="yourCourse">Your Course</string>
+    <string name="yourSubject">Your Subject</string>
     <string name="yourMarks">Your Marks</string>
     <string name="yourName">Enter Your Name</string>
     <string name="yourMobile">Entre Your Mobile no.</string>
@@ -36,6 +37,19 @@
     <string name="science">Science</string>
     <string name="socialscience">Social Science</string>
     <string name="english">English</string>
+    <string name="physics">Physics</string>
+    <string name="chemistry">Chemistry</string>
+    <string name="computer">Computer</string>
+    <string name="biology">Biology</string>
+    <string name="sanskrit">Sanskrit</string>
+    <string name="ba">B.A</string>
+    <string name="eco">ECO</string>
+    <string name="spcc">SPCC</string>
+    <string name="state">State</string>
+    <string name="account">Account</string>
+    <string name="sociology">Sociology</string>
+    <string name="philosophy">Philosophy</string>
+    <string name="geography">Geography</string>
     <string name="defaultMarks">00</string>
     <string name="uploadDocuments">Documents</string>
     <string name="MarksheetX">10th Marksheet</string>
@@ -43,6 +57,7 @@
     <string name="MarksheetXII">12th Marksheet</string>
     <string name="MarksheetXI">11th Marksheet</string>
     <string name="selectCourse">Select Your Course</string>
+    <string name="selectSubject">Select Your Subject</string>
     <string name="NeverStopLearningBecauseLifeNeverStopTeaching">Never Stop Learning Because Life Never Stop Teaching</string>
 
     <string-array name="stream_array">
@@ -50,6 +65,13 @@
         <item>Science</item>
         <item>Commerce</item>
         <item>Arts</item>
+    </string-array>
+
+    <string-array name="subject_array">
+        <item>Select Your Subject</item>
+        <item>Maths</item>
+        <item>Biology</item>
+        <item>Maths and Biology</item>
     </string-array>
 
 </resources>

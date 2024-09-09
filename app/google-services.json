@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "62637637702",
+    "project_id": "brightfuture-bb071",
+    "storage_bucket": "brightfuture-bb071.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:62637637702:android:40b5ce53cda0cfd9d08a47",
+        "android_client_info": {
+          "package_name": "com.example.brightfuture"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTUc44vRzgnTJ7OevgJGTlyWcAtU6GZXg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

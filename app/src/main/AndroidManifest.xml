@@ -50,12 +50,32 @@
         <activity android:name=".XII.science.ScienceActivity"
             android:exported="true"/>
 
+        <activity android:name=".XII.science.mathsbio.MathsBio"
+            android:exported="true"/>
+
+        <activity android:name=".XII.science.mathsbio.MathsBiologyPractical"
+            android:exported="true"/>
+
+        <activity android:name=".XII.science.maths.Maths"
+            android:exported="true"/>
+
+        <activity android:name=".XII.science.maths.MathsPractical"
+            android:exported="true"/>
+
+        <activity android:name=".XII.science.biology.Biology"
+            android:exported="true"/>
+
+        <activity android:name=".XII.science.biology.BiologyPractical"
+            android:exported="true"/>
+
         <activity android:name=".XII.commerce.CommerceActivity"
             android:exported="true"/>
 
         <activity android:name=".XII.arts.ArtsActivity"
             android:exported="true"/>
 
+        <activity android:name=".XII.XIIDocumentUpload"
+            android:exported="true"/>
 
     </application>
 </manifest>
