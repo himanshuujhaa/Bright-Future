@@ -116,11 +116,11 @@ public class MathsQuizActivity extends AppCompatActivity {
         String finalScoreMessage;
 
         if (score >= 80) {
-            finalScoreMessage = "You will be good at Science";
+            finalScoreMessage = "You will be good at Engineering";
         } else if (score >= 60 && score < 80) {
-            finalScoreMessage = "You will be good at Commerce";
+            finalScoreMessage = "You will be fine at Engineering";
         } else {
-            finalScoreMessage = "You will be good at Arts";
+            finalScoreMessage = "Try out other carrier options";
         }
 
         // Pass the score and result message to the ResultActivity

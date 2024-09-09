@@ -1,4 +1,4 @@
-package com.example.brightfuture.XII.science.biology;
+package com.example.brightfuture.XII.commerce;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,14 +13,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.brightfuture.R;
 import com.example.brightfuture.ResultActivity;
-import com.example.brightfuture.X.ScienceQuizActivity;
+import com.example.brightfuture.XII.science.maths.MathsQuizActivity;
 import com.example.brightfuture.quiz.Quiz;
 import com.example.brightfuture.quiz.QuizRepository;
 
 import java.util.Collections;
 import java.util.List;
 
-public class BiologyQuizActivity extends AppCompatActivity {
+public class CommerceQuizActivity extends AppCompatActivity {
 
     private TextView questionTextView;
     private RadioGroup optionsGroup;
@@ -39,7 +39,7 @@ public class BiologyQuizActivity extends AppCompatActivity {
         submitButton = findViewById(R.id.submitButton);
 
         // Load all available quiz data
-        List<Quiz> allQuizzes = QuizRepository.getBiologyQuizzes();
+        List<Quiz> allQuizzes = QuizRepository.getCommereceQuizzes();
 
         // Shuffle the quiz list to randomize questions
         Collections.shuffle(allQuizzes);
@@ -115,16 +115,16 @@ public class BiologyQuizActivity extends AppCompatActivity {
     private void showFinalScore() {
         String finalScoreMessage;
 
-        if (score >= 85) {
-            finalScoreMessage = "You will be good at Medical";
+        if (score >= 80) {
+            finalScoreMessage = "You will be good at CA";
         } else if (score >= 60 && score < 80) {
-            finalScoreMessage = "Try out other Medical options";
+            finalScoreMessage = "Try other things than CA";
         } else {
             finalScoreMessage = "Try out other carrier options";
         }
 
         // Pass the score and result message to the ResultActivity
-        Intent intent = new Intent(BiologyQuizActivity.this, ResultActivity.class);
+        Intent intent = new Intent(CommerceQuizActivity.this, ResultActivity.class);
         intent.putExtra("score", score);
         intent.putExtra("resultMessage", finalScoreMessage);
         startActivity(intent);
