@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center"
+    android:background="@drawable/pagebkg">
+
+    <!-- Question TextView -->
+    <TextView
+        android:id="@+id/questionTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Question will appear here"
+        android:textSize="24sp"
+        android:textColor="@android:color/black"
+        android:gravity="center_horizontal"
+        android:padding="16dp" />
+
+    <!-- RadioGroup for options -->
+    <RadioGroup
+        android:id="@+id/optionsGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+        <!-- Radio buttons for answers will be added dynamically from the code -->
+    </RadioGroup>
+
+    <!-- Submit Button -->
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit Answer"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        android:padding="12dp" />
+
+</LinearLayout>

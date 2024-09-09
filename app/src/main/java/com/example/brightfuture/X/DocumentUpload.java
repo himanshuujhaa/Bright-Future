@@ -14,11 +14,13 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.brightfuture.R;
+import com.example.brightfuture.XII.XIIDocumentUpload;
 
 public class DocumentUpload extends AppCompatActivity {
 
     private static final int REQUEST_CODE_PICK_FILE_X = 1;
     private static final int REQUEST_CODE_PICK_FILE_IX = 2;
+    private Button reset, next;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,8 @@ public class DocumentUpload extends AppCompatActivity {
         // Initialize buttons
         Button uploadXII = findViewById(R.id.uploadMarksheetX);
         Button uploadXI = findViewById(R.id.uploadMarksheetIX);
+        reset = findViewById(R.id.buttonReset); // Ensure this ID exists in activity_document_upload.xml
+        next = findViewById(R.id.buttonNext); // Ensure this ID exists in activity_document_upload.xml
 
         // Set click listener for Marksheet XII upload
         uploadXII.setOnClickListener(new View.OnClickListener() {
@@ -44,6 +48,32 @@ public class DocumentUpload extends AppCompatActivity {
                 openFilePicker(REQUEST_CODE_PICK_FILE_IX);
             }
         });
+
+        // Set click listener for reset button
+//        if (reset != null) {
+//            reset.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    // Reset selected file names
+//                    selectedXFileName = null;
+//                    selectedIXFileName = null;
+//
+//                    // Reset any UI elements if needed (e.g., Toast message)
+//                    Toast.makeText(DocumentUpload.this, "Selections have been reset", Toast.LENGTH_SHORT).show();
+//                }
+//            });
+//        }
+
+        // Set click listener for next button
+        if (next != null) {
+            next.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(DocumentUpload.this, ScienceQuizActivity.class);
+                    startActivity(intent);
+                }
+            });
+        }
     }
 
     // Method to open file picker

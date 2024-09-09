@@ -77,5 +77,21 @@
         <activity android:name=".XII.XIIDocumentUpload"
             android:exported="true"/>
 
+        <activity android:name=".X.ScienceQuizActivity"
+            android:exported="true"/>
+
+        <activity android:name=".XII.science.maths.MathsQuizActivity"
+            android:exported="true"/>
+
+        <activity android:name=".XII.science.biology.BiologyQuizActivity"
+            android:exported="true"/>
+
+        <activity android:name=".XII.science.mathsbio.MathsBioQuizActivity"
+            android:exported="true"/>
+
+        <activity android:name=".ResultActivity"
+            android:exported="true"/>
+
+
     </application>
 </manifest>
