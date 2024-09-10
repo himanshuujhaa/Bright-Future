@@ -14,8 +14,6 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.brightfuture.R;
-import com.example.brightfuture.X.DocumentUpload;
-import com.example.brightfuture.X.ScienceQuizActivity;
 import com.example.brightfuture.XII.arts.ArtsQuizActivity;
 import com.example.brightfuture.XII.commerce.CommerceQuizActivity;
 import com.example.brightfuture.XII.science.biology.BiologyQuizActivity;
@@ -26,7 +24,10 @@ public class XIIDocumentUpload extends AppCompatActivity {
 
     private static final int REQUEST_CODE_PICK_FILE_XII = 1;
     private static final int REQUEST_CODE_PICK_FILE_XI = 2;
+
     private Button next, reset;
+    private Uri selectedFileUriXII = null;
+    private Uri selectedFileUriXI = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +36,7 @@ public class XIIDocumentUpload extends AppCompatActivity {
 
         Intent intent = getIntent();
         String source = intent.getStringExtra("source");
-        System.out.println("Source value "+source);
+        System.out.println("Source value " + source);
 
         next = findViewById(R.id.buttonNext);
         reset = findViewById(R.id.buttonReset);
@@ -60,33 +61,35 @@ public class XIIDocumentUpload extends AppCompatActivity {
             }
         });
 
-        if (next != null) {
-            next.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if("arts".equals(source)) {
-                        Intent intent = new Intent(XIIDocumentUpload.this, ArtsQuizActivity.class);
-                        startActivity(intent);
-                    }
-                    else if("commerce".equals(source)){
-                        Intent intent = new Intent(XIIDocumentUpload.this, CommerceQuizActivity.class);
-                        startActivity(intent);
-                    }
-                    else if("biology".equals(source)){
-                        Intent intent = new Intent(XIIDocumentUpload.this, BiologyQuizActivity.class);
-                        startActivity(intent);
-                    }
-                    else if("mathsBio".equals(source)){
-                        Intent intent = new Intent(XIIDocumentUpload.this, MathsBioQuizActivity.class);
-                        startActivity(intent);
-                    }
-                    else if("maths".equals(source)){
-                        Intent intent = new Intent(XIIDocumentUpload.this, MathsQuizActivity.class);
-                        startActivity(intent);
-                    }
+        // Set click listener for the reset button
+        reset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                resetSelectedFiles();  // Reset the selected files
+            }
+        });
+
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if ("arts".equals(source)) {
+                    Intent intent = new Intent(XIIDocumentUpload.this, ArtsQuizActivity.class);
+                    startActivity(intent);
+                } else if ("commerce".equals(source)) {
+                    Intent intent = new Intent(XIIDocumentUpload.this, CommerceQuizActivity.class);
+                    startActivity(intent);
+                } else if ("biology".equals(source)) {
+                    Intent intent = new Intent(XIIDocumentUpload.this, BiologyQuizActivity.class);
+                    startActivity(intent);
+                } else if ("mathsBio".equals(source)) {
+                    Intent intent = new Intent(XIIDocumentUpload.this, MathsBioQuizActivity.class);
+                    startActivity(intent);
+                } else if ("maths".equals(source)) {
+                    Intent intent = new Intent(XIIDocumentUpload.this, MathsQuizActivity.class);
+                    startActivity(intent);
                 }
-            });
-        }
+            }
+        });
     }
 
     // Method to open file picker
@@ -103,11 +106,12 @@ public class XIIDocumentUpload extends AppCompatActivity {
         if (resultCode == RESULT_OK && data != null) {
             Uri fileUri = data.getData(); // Get the URI of the selected file
             String fileName = getFileName(fileUri); // Get file name (optional)
+
             if (requestCode == REQUEST_CODE_PICK_FILE_XII) {
-                // Handle document upload for Marksheet XII
+                selectedFileUriXII = fileUri; // Store the selected file URI for XII
                 Toast.makeText(this, "Selected XII Marksheet: " + fileName, Toast.LENGTH_SHORT).show();
             } else if (requestCode == REQUEST_CODE_PICK_FILE_XI) {
-                // Handle document upload for Marksheet XI
+                selectedFileUriXI = fileUri; // Store the selected file URI for XI
                 Toast.makeText(this, "Selected XI Marksheet: " + fileName, Toast.LENGTH_SHORT).show();
             }
         }
@@ -132,5 +136,15 @@ public class XIIDocumentUpload extends AppCompatActivity {
             }
         }
         return result;
+    }
+
+    // Method to reset selected files
+    private void resetSelectedFiles() {
+        // Clear the stored URIs for both XII and XI marksheets
+        selectedFileUriXII = null;
+        selectedFileUriXI = null;
+
+        // Provide feedback to the user that the documents have been reset
+        Toast.makeText(this, "Selected files have been reset.", Toast.LENGTH_SHORT).show();
     }
 }

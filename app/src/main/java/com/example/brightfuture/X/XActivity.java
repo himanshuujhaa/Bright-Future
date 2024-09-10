@@ -62,8 +62,16 @@ public class XActivity extends AppCompatActivity {
             Toast.makeText(this, "Please enter Mobile No.", Toast.LENGTH_SHORT).show();
             return false;
         }
+        if(mobileNo.getText().toString().length() < 10 || mobileNo.getText().toString().length() > 10){
+            Toast.makeText(this, "Please enter 10 digit Mobile No.", Toast.LENGTH_SHORT).show();
+            return false;
+        }
         if (TextUtils.isEmpty(whatsApp.getText().toString())) {
             Toast.makeText(this, "Please enter WhatsApp No.", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        if(whatsApp.getText().toString().length() < 10 || whatsApp.getText().toString().length() > 10){
+            Toast.makeText(this, "Please enter 10 digit WhatsApp No.", Toast.LENGTH_SHORT).show();
             return false;
         }
 

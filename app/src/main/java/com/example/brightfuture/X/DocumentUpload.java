@@ -20,7 +20,10 @@ public class DocumentUpload extends AppCompatActivity {
 
     private static final int REQUEST_CODE_PICK_FILE_X = 1;
     private static final int REQUEST_CODE_PICK_FILE_IX = 2;
+
     private Button reset, next;
+    private Uri selectedFileUriX = null;  // To keep track of selected X marksheet
+    private Uri selectedFileUriIX = null; // To keep track of selected IX marksheet
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,21 +31,21 @@ public class DocumentUpload extends AppCompatActivity {
         setContentView(R.layout.activity_document_upload);
 
         // Initialize buttons
-        Button uploadXII = findViewById(R.id.uploadMarksheetX);
-        Button uploadXI = findViewById(R.id.uploadMarksheetIX);
-        reset = findViewById(R.id.buttonReset); // Ensure this ID exists in activity_document_upload.xml
-        next = findViewById(R.id.buttonNext); // Ensure this ID exists in activity_document_upload.xml
+        Button uploadX = findViewById(R.id.uploadMarksheetX);
+        Button uploadIX = findViewById(R.id.uploadMarksheetIX);
+        reset = findViewById(R.id.buttonReset);  // Ensure this ID exists in activity_document_upload.xml
+        next = findViewById(R.id.buttonNext);    // Ensure this ID exists in activity_document_upload.xml
 
-        // Set click listener for Marksheet XII upload
-        uploadXII.setOnClickListener(new View.OnClickListener() {
+        // Set click listener for Marksheet X upload
+        uploadX.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openFilePicker(REQUEST_CODE_PICK_FILE_X);
             }
         });
 
-        // Set click listener for Marksheet XI upload
-        uploadXI.setOnClickListener(new View.OnClickListener() {
+        // Set click listener for Marksheet IX upload
+        uploadIX.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openFilePicker(REQUEST_CODE_PICK_FILE_IX);
@@ -50,30 +53,21 @@ public class DocumentUpload extends AppCompatActivity {
         });
 
         // Set click listener for reset button
-//        if (reset != null) {
-//            reset.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    // Reset selected file names
-//                    selectedXFileName = null;
-//                    selectedIXFileName = null;
-//
-//                    // Reset any UI elements if needed (e.g., Toast message)
-//                    Toast.makeText(DocumentUpload.this, "Selections have been reset", Toast.LENGTH_SHORT).show();
-//                }
-//            });
-//        }
+        reset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                resetSelectedFiles();  // Reset the selected files
+            }
+        });
 
         // Set click listener for next button
-        if (next != null) {
-            next.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent intent = new Intent(DocumentUpload.this, ScienceQuizActivity.class);
-                    startActivity(intent);
-                }
-            });
-        }
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DocumentUpload.this, ScienceQuizActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     // Method to open file picker
@@ -91,10 +85,10 @@ public class DocumentUpload extends AppCompatActivity {
             Uri fileUri = data.getData(); // Get the URI of the selected file
             String fileName = getFileName(fileUri); // Get file name (optional)
             if (requestCode == REQUEST_CODE_PICK_FILE_X) {
-                // Handle document upload for Marksheet XII
+                selectedFileUriX = fileUri;  // Store the selected file URI for X
                 Toast.makeText(this, "Selected X Marksheet: " + fileName, Toast.LENGTH_SHORT).show();
             } else if (requestCode == REQUEST_CODE_PICK_FILE_IX) {
-                // Handle document upload for Marksheet XI
+                selectedFileUriIX = fileUri; // Store the selected file URI for IX
                 Toast.makeText(this, "Selected IX Marksheet: " + fileName, Toast.LENGTH_SHORT).show();
             }
         }
@@ -119,5 +113,15 @@ public class DocumentUpload extends AppCompatActivity {
             }
         }
         return result;
+    }
+
+    // Method to reset selected files
+    private void resetSelectedFiles() {
+        // Clear the stored URIs for both X and IX marksheets
+        selectedFileUriX = null;
+        selectedFileUriIX = null;
+
+        // Provide feedback to the user that the documents have been reset
+        Toast.makeText(this, "Selections have been reset", Toast.LENGTH_SHORT).show();
     }
 }
