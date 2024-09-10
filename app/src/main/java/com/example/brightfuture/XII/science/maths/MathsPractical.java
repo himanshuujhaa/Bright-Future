@@ -36,6 +36,7 @@ public class MathsPractical extends AppCompatActivity {
             public void onClick(View view) {
                 if (validateFields()) {
                     Intent intent = new Intent(MathsPractical.this, XIIDocumentUpload.class);
+                    intent.putExtra("source", "maths");
                     startActivity(intent);
                 }
             }

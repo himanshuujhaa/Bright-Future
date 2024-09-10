@@ -41,6 +41,7 @@ public class CommerceActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (validateFields()) {
                     Intent intent = new Intent(CommerceActivity.this, XIIDocumentUpload.class);
+                    intent.putExtra("source", "commerce");
                     startActivity(intent);
                 }
             }

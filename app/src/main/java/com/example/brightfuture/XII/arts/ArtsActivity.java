@@ -42,6 +42,7 @@ public class ArtsActivity extends AppCompatActivity {
                 if (validateFields()) {
                     // All fields are filled, proceed to next activity
                     Intent intent = new Intent(ArtsActivity.this, XIIDocumentUpload.class);
+                    intent.putExtra("source", "arts");
                     startActivity(intent);
                 }
             }

@@ -34,6 +34,7 @@ public class BiologyPractical extends AppCompatActivity {
             public void onClick(View view) {
                 if (validateFields()) {
                     Intent intent = new Intent(BiologyPractical.this, XIIDocumentUpload.class);
+                    intent.putExtra("source", "biology");
                     startActivity(intent);
                 }
             }

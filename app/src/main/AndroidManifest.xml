@@ -89,6 +89,12 @@
         <activity android:name=".XII.science.mathsbio.MathsBioQuizActivity"
             android:exported="true"/>
 
+        <activity android:name=".XII.commerce.CommerceQuizActivity"
+            android:exported="true"/>
+
+        <activity android:name=".XII.arts.ArtsQuizActivity"
+            android:exported="true"/>
+
         <activity android:name=".ResultActivity"
             android:exported="true"/>
 

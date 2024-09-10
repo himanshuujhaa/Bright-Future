@@ -14,16 +14,31 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.brightfuture.R;
+import com.example.brightfuture.X.DocumentUpload;
+import com.example.brightfuture.X.ScienceQuizActivity;
+import com.example.brightfuture.XII.arts.ArtsQuizActivity;
+import com.example.brightfuture.XII.commerce.CommerceQuizActivity;
+import com.example.brightfuture.XII.science.biology.BiologyQuizActivity;
+import com.example.brightfuture.XII.science.maths.MathsQuizActivity;
+import com.example.brightfuture.XII.science.mathsbio.MathsBioQuizActivity;
 
 public class XIIDocumentUpload extends AppCompatActivity {
 
     private static final int REQUEST_CODE_PICK_FILE_XII = 1;
     private static final int REQUEST_CODE_PICK_FILE_XI = 2;
+    private Button next, reset;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_xii_document_upload);
+
+        Intent intent = getIntent();
+        String source = intent.getStringExtra("source");
+        System.out.println("Source value "+source);
+
+        next = findViewById(R.id.buttonNext);
+        reset = findViewById(R.id.buttonReset);
 
         // Initialize buttons
         Button uploadXII = findViewById(R.id.uploadMarksheetXII);
@@ -44,6 +59,34 @@ public class XIIDocumentUpload extends AppCompatActivity {
                 openFilePicker(REQUEST_CODE_PICK_FILE_XI);
             }
         });
+
+        if (next != null) {
+            next.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if("arts".equals(source)) {
+                        Intent intent = new Intent(XIIDocumentUpload.this, ArtsQuizActivity.class);
+                        startActivity(intent);
+                    }
+                    else if("commerce".equals(source)){
+                        Intent intent = new Intent(XIIDocumentUpload.this, CommerceQuizActivity.class);
+                        startActivity(intent);
+                    }
+                    else if("biology".equals(source)){
+                        Intent intent = new Intent(XIIDocumentUpload.this, BiologyQuizActivity.class);
+                        startActivity(intent);
+                    }
+                    else if("mathsBio".equals(source)){
+                        Intent intent = new Intent(XIIDocumentUpload.this, MathsBioQuizActivity.class);
+                        startActivity(intent);
+                    }
+                    else if("maths".equals(source)){
+                        Intent intent = new Intent(XIIDocumentUpload.this, MathsQuizActivity.class);
+                        startActivity(intent);
+                    }
+                }
+            });
+        }
     }
 
     // Method to open file picker
