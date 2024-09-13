@@ -2,6 +2,7 @@ package com.example.brightfuture.XII.science.mathsbio;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputFilter;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -29,6 +30,13 @@ public class MathsBio extends AppCompatActivity {
         physics = findViewById(R.id.physicsMarks);
         chemistry = findViewById(R.id.chemistryMarks);
         maths = findViewById(R.id.mathMarks);
+
+        InputFilter[] filters = new InputFilter[]{new InputFilter.LengthFilter(2)};
+        biology.setFilters(filters);
+        physics.setFilters(filters);
+        chemistry.setFilters(filters);
+        english.setFilters(filters);
+        maths.setFilters(filters);
 
         next = findViewById(R.id.buttonNext);
         reset = findViewById(R.id.buttonReset);

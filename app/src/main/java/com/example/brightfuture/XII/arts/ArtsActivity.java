@@ -2,6 +2,7 @@ package com.example.brightfuture.XII.arts;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputFilter;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -32,6 +33,14 @@ public class ArtsActivity extends AppCompatActivity {
         sanskrit = findViewById(R.id.sanskritMarks);
         gujarati = findViewById(R.id.gujaratiMarks);
 
+        InputFilter[] filters = new InputFilter[]{new InputFilter.LengthFilter(2)};
+        ba.setFilters(filters);
+        english.setFilters(filters);
+        sociology.setFilters(filters);
+        philosophy.setFilters(filters);
+        geography.setFilters(filters);
+        gujarati.setFilters(filters);
+        sanskrit.setFilters(filters);
 
         next = findViewById(R.id.buttonNext);
         reset = findViewById(R.id.buttonReset);

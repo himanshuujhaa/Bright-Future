@@ -27,7 +27,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/yourMarks"
+                android:text="@string/yourPracticals"
                 android:textAlignment="center"
                 android:textColor="@color/lavender"
                 android:textSize="36sp"

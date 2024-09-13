@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import android.text.InputFilter;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -30,6 +31,13 @@ public class XmarksActivity extends AppCompatActivity {
         hindi_sanskrit = findViewById(R.id.hindiSanskritMarks);
         gujarati = findViewById(R.id.gujaratiMarks);
 
+        InputFilter[] filters = new InputFilter[]{new InputFilter.LengthFilter(2)};
+        maths.setFilters(filters);
+        english.setFilters(filters);
+        science.setFilters(filters);
+        socialScience.setFilters(filters);
+        hindi_sanskrit.setFilters(filters);
+        gujarati.setFilters(filters);
 
         next = findViewById(R.id.buttonNext);
         reset = findViewById(R.id.buttonReset);

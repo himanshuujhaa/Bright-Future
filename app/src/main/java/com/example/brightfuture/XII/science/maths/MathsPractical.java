@@ -2,6 +2,7 @@ package com.example.brightfuture.XII.science.maths;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputFilter;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -27,6 +28,11 @@ public class MathsPractical extends AppCompatActivity {
         computer = findViewById(R.id.computerMarks);
         physics = findViewById(R.id.physicsMarks);
         chemistry = findViewById(R.id.chemistryMarks);
+
+        InputFilter[] filters = new InputFilter[]{new InputFilter.LengthFilter(2)};
+        computer.setFilters(filters);
+        physics.setFilters(filters);
+        chemistry.setFilters(filters);
 
         next = findViewById(R.id.buttonNext);
         reset = findViewById(R.id.buttonReset);

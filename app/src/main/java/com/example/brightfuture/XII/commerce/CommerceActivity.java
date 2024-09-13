@@ -2,6 +2,7 @@ package com.example.brightfuture.XII.commerce;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputFilter;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -32,6 +33,14 @@ public class CommerceActivity extends AppCompatActivity {
         spcc = findViewById(R.id.spccMarks);
         gujarati = findViewById(R.id.gujaratiMarks);
 
+        InputFilter[] filters = new InputFilter[]{new InputFilter.LengthFilter(2)};
+        ba.setFilters(filters);
+        english.setFilters(filters);
+        eco.setFilters(filters);
+        state.setFilters(filters);
+        account.setFilters(filters);
+        gujarati.setFilters(filters);
+        spcc.setFilters(filters);
 
         next = findViewById(R.id.buttonNext);
         reset = findViewById(R.id.buttonReset);

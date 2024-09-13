@@ -28,7 +28,8 @@
     <string name="yourName">Enter Your Name</string>
     <string name="yourMobile">Entre Your Mobile no.</string>
     <string name="yourWhatsAppNo">Enter your WhatsApp no.</string>
-    <string name="yourHobby">Enter your Hobby</string>
+    <string name="yourHobby">Enter your Intrest</string>
+    <string name="yourPracticals"> Your Practicals</string>
     <string name="reset">Reset</string>
     <string name="next">Next</string>
     <string name="maths">Mathematics</string>
