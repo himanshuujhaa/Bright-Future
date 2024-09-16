@@ -10,12 +10,13 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.brightfuture.BaseActivity;
 import com.example.brightfuture.R;
 import com.example.brightfuture.XII.science.biology.Biology;
 import com.example.brightfuture.XII.science.maths.Maths;
 import com.example.brightfuture.XII.science.mathsbio.MathsBio;
 
-public class ScienceActivity extends AppCompatActivity {
+public class ScienceActivity extends BaseActivity {
 
     private Spinner subjectSpinner;
     private Button reset, next;
@@ -24,7 +25,7 @@ public class ScienceActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle saveInstanceState){
         super.onCreate(saveInstanceState);
-        setContentView(R.layout.activity_science);
+        setChildLayout(R.layout.activity_science);
 
         subjectSpinner = findViewById(R.id.subjectSpinner);
         reset = findViewById(R.id.buttonReset);

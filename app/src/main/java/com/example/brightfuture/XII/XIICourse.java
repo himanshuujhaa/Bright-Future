@@ -10,12 +10,13 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.brightfuture.BaseActivity;
 import com.example.brightfuture.R;
 import com.example.brightfuture.XII.arts.ArtsActivity;
 import com.example.brightfuture.XII.commerce.CommerceActivity;
 import com.example.brightfuture.XII.science.ScienceActivity;
 
-public class XIICourse extends AppCompatActivity {
+public class XIICourse extends BaseActivity {
 
     private Spinner streamSpinner;
     private Button reset, next;
@@ -24,7 +25,7 @@ public class XIICourse extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle saveInstanceState) {
         super.onCreate(saveInstanceState);
-        setContentView(R.layout.activity_course);
+        setChildLayout(R.layout.activity_course);
 
         streamSpinner = findViewById(R.id.streamSpinner);
         reset = findViewById(R.id.buttonReset);

@@ -1,12 +1,8 @@
 package com.example.brightfuture;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.Toast;
 
-import com.example.brightfuture.R;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -14,18 +10,16 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.example.brightfuture.databinding.ActivityMainBinding;
 
-public class MainActivity extends AppCompatActivity {
-
+public class BaseActivity extends AppCompatActivity {
     ActivityMainBinding binding;
 
     @Override
-    protected void onCreate(Bundle saveInstanceState) {
-        super.onCreate(saveInstanceState);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        replaceFragment(new HomeFragment());
-
+        // Set up bottom navigation
         binding.bottomNavigationView.setOnItemSelectedListener(item -> {
             int itemId = item.getItemId();
 
@@ -43,10 +37,17 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void replaceFragment(Fragment fragment) {
+    // Helper method to allow children to set their own content
+    protected void setChildLayout(int layoutResID) {
+        View content = getLayoutInflater().inflate(layoutResID, null);
+        binding.frameLayout.addView(content);  // Add child content to frameLayout
+    }
+
+    protected void replaceFragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.frameLayout, fragment);
         fragmentTransaction.commit();
     }
 }
+

@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.brightfuture.BaseActivity;
 import com.example.brightfuture.R;
 import com.example.brightfuture.ResultActivity;
 import com.example.brightfuture.X.ScienceQuizActivity;
@@ -20,7 +21,7 @@ import com.example.brightfuture.quiz.QuizRepository;
 import java.util.Collections;
 import java.util.List;
 
-public class BiologyQuizActivity extends AppCompatActivity {
+public class BiologyQuizActivity extends BaseActivity {
 
     private TextView questionTextView;
     private RadioGroup optionsGroup;
@@ -32,7 +33,7 @@ public class BiologyQuizActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_science_quiz);
+        setChildLayout(R.layout.activity_science_quiz);
 
         questionTextView = findViewById(R.id.questionTextView);
         optionsGroup = findViewById(R.id.optionsGroup);

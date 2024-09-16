@@ -11,11 +11,12 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.brightfuture.BaseActivity;
 import com.example.brightfuture.R;
 import com.example.brightfuture.XII.XIIDocumentUpload;
 import com.example.brightfuture.XII.science.mathsbio.MathsBiologyPractical;
 
-public class CommerceActivity extends AppCompatActivity {
+public class CommerceActivity extends BaseActivity {
 
     private EditText english, ba, eco, state, account, spcc, gujarati;
     private Button next, reset;
@@ -23,7 +24,7 @@ public class CommerceActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle saveInstanceState) {
         super.onCreate(saveInstanceState);
-        setContentView(R.layout.activity_commerce);
+        setChildLayout(R.layout.activity_commerce);
 
         english = findViewById(R.id.englishMarks);
         ba = findViewById(R.id.baMarks);

@@ -11,9 +11,10 @@ import android.text.InputFilter;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.brightfuture.BaseActivity;
 import com.example.brightfuture.R;
 
-public class XmarksActivity extends AppCompatActivity {
+public class XmarksActivity extends BaseActivity {
 
     private EditText maths, english, science, socialScience, hindi_sanskrit, gujarati;
     private Button next, reset;
@@ -22,7 +23,8 @@ public class XmarksActivity extends AppCompatActivity {
     protected void onCreate(Bundle saveInstanceState) {
 
         super.onCreate(saveInstanceState);
-        setContentView(R.layout.activity_x_marks);
+
+        setChildLayout(R.layout.activity_x_marks);
 
         maths = findViewById(R.id.mathMarks);
         english = findViewById(R.id.englishMarks);

@@ -11,10 +11,11 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.brightfuture.BaseActivity;
 import com.example.brightfuture.R;
 import com.example.brightfuture.XII.XIIDocumentUpload;
 
-public class MathsBiologyPractical extends AppCompatActivity {
+public class MathsBiologyPractical extends BaseActivity {
 
     private EditText biology, physics, chemistry;
     private Button next, reset;
@@ -22,7 +23,7 @@ public class MathsBiologyPractical extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle saveInstanceState) {
         super.onCreate(saveInstanceState);
-        setContentView(R.layout.activity_bio_practical);
+        setChildLayout(R.layout.activity_bio_practical);
 
         biology = findViewById(R.id.biologyMarks);
         physics = findViewById(R.id.physicsMarks);

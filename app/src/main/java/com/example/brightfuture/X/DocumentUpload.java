@@ -13,10 +13,11 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.brightfuture.BaseActivity;
 import com.example.brightfuture.R;
 import com.example.brightfuture.XII.XIIDocumentUpload;
 
-public class DocumentUpload extends AppCompatActivity {
+public class DocumentUpload extends BaseActivity {
 
     private static final int REQUEST_CODE_PICK_FILE_X = 1;
     private static final int REQUEST_CODE_PICK_FILE_IX = 2;
@@ -28,7 +29,8 @@ public class DocumentUpload extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_document_upload);
+
+        setChildLayout(R.layout.activity_document_upload);
 
         // Initialize buttons
         Button uploadX = findViewById(R.id.uploadMarksheetX);

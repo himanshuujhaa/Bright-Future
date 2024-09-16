@@ -13,6 +13,7 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.brightfuture.BaseActivity;
 import com.example.brightfuture.R;
 import com.example.brightfuture.XII.arts.ArtsQuizActivity;
 import com.example.brightfuture.XII.commerce.CommerceQuizActivity;
@@ -20,7 +21,7 @@ import com.example.brightfuture.XII.science.biology.BiologyQuizActivity;
 import com.example.brightfuture.XII.science.maths.MathsQuizActivity;
 import com.example.brightfuture.XII.science.mathsbio.MathsBioQuizActivity;
 
-public class XIIDocumentUpload extends AppCompatActivity {
+public class XIIDocumentUpload extends BaseActivity {
 
     private static final int REQUEST_CODE_PICK_FILE_XII = 1;
     private static final int REQUEST_CODE_PICK_FILE_XI = 2;
@@ -32,7 +33,7 @@ public class XIIDocumentUpload extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_xii_document_upload);
+        setChildLayout(R.layout.activity_xii_document_upload);
 
         Intent intent = getIntent();
         String source = intent.getStringExtra("source");

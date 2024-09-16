@@ -59,6 +59,7 @@
     <string name="MarksheetXI">11th Marksheet</string>
     <string name="selectCourse">Select Your Course</string>
     <string name="selectSubject">Select Your Subject</string>
+    <string name="yourProfile">Your Profile</string>
     <string name="NeverStopLearningBecauseLifeNeverStopTeaching">Never Stop Learning Because Life Never Stop Teaching</string>
 
     <string-array name="stream_array">
@@ -74,5 +75,7 @@
         <item>Biology</item>
         <item>Maths and Biology</item>
     </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="book">Book Fragment</string>
 
 </resources>

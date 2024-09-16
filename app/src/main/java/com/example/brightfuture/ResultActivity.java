@@ -7,12 +7,13 @@ import android.widget.Button;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class ResultActivity extends AppCompatActivity {
+public class ResultActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_result);
+
+        setChildLayout(R.layout.activity_result);
 
         TextView resultMessageTextView = findViewById(R.id.resultMessageTextView);
         Button exitButton = findViewById(R.id.exitButton);

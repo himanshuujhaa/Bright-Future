@@ -1,6 +1,7 @@
 package com.example.brightfuture.XII;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -10,9 +11,12 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.brightfuture.BaseActivity;
 import com.example.brightfuture.R;
+import com.example.brightfuture.X.XActivity;
+import com.example.brightfuture.X.XmarksActivity;
 
-public class XIIActivity extends AppCompatActivity {
+public class XIIActivity extends BaseActivity {
 
     private EditText name, mobileNo, whatsApp, hobby;
     private Button reset, next;
@@ -20,7 +24,7 @@ public class XIIActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_xii);
+        setChildLayout(R.layout.activity_xii);
 
         // Initialize EditText fields
         name = findViewById(R.id.name);
@@ -39,9 +43,20 @@ public class XIIActivity extends AppCompatActivity {
 
         // Set OnClickListener for the next button
         next.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View view) {
                 if (validateFields()) {
+                    // Save data to SharedPreferences
+                    SharedPreferences sharedPreferences = getSharedPreferences("UserProfile", MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putString("name", name.getText().toString());
+                    editor.putString("mobileNo", mobileNo.getText().toString());
+                    editor.putString("whatsApp", whatsApp.getText().toString());
+                    editor.putString("hobby", hobby.getText().toString());
+                    editor.apply();
+
+                    // Navigate to the next activity
                     Intent intent = new Intent(XIIActivity.this, XIICourse.class);
                     startActivity(intent);
                 }
