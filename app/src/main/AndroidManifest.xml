@@ -98,6 +98,10 @@
         <activity android:name=".ResultActivity"
             android:exported="true"/>
 
+        <activity android:name=".XII.RegardingSubject"
+            android:exported="true"/>
+
+
 
     </application>
 </manifest>

@@ -60,6 +60,17 @@
     <string name="selectCourse">Select Your Course</string>
     <string name="selectSubject">Select Your Subject</string>
     <string name="yourProfile">Your Profile</string>
+    <string name="video">Videos</string>
+    <string name="regardingSub">Regarding Subject</string>
+    <string name="extraCourse">Extra Course</string>
+    <string name="commerece">Commerece</string>
+    <string name="appDevelopment">App Development</string>
+    <string name="webDevelopment">Web Development</string>
+    <string name="design">UI/UX Design</string>
+    <string name="machineLearning">Machine Learning</string>
+    <string name="dataAnalytics">Data Analytics</string>
+    <string name="networkSecurity">Network Security</string>
+    <string name="arts">Arts</string>
     <string name="NeverStopLearningBecauseLifeNeverStopTeaching">Never Stop Learning Because Life Never Stop Teaching</string>
 
     <string-array name="stream_array">
