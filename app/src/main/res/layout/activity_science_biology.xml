@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:padding="16dp"
     android:gravity="center"
-    android:background="@drawable/pagebkg">
+    android:background="@color/lavender">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"

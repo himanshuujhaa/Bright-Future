@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.brightfuture.BaseActivity;
+import com.example.brightfuture.ExtraCourse;
 import com.example.brightfuture.R;
 import com.example.brightfuture.XII.arts.ArtsSubject11;
 import com.example.brightfuture.XII.arts.ArtsSubject12;
@@ -27,9 +28,9 @@ public class RegardingSubject extends BaseActivity {
 
         Toast.makeText(this, source, Toast.LENGTH_SHORT).show();
 
-        Button button = findViewById(R.id.regardingSubject);
+        Button buttonSubject = findViewById(R.id.regardingSubject);
 
-        button.setOnClickListener(new View.OnClickListener() {
+        buttonSubject.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if(source.equals("Science12")){
@@ -60,7 +61,14 @@ public class RegardingSubject extends BaseActivity {
         });
 
 
+        Button buttonExtraCourse = findViewById(R.id.extraCourse);
 
-
+        buttonExtraCourse.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(RegardingSubject.this, ExtraCourse.class);
+                startActivity(intent);
+            }
+        });
     }
 }

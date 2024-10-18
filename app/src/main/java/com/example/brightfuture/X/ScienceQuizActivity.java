@@ -41,7 +41,7 @@ public class ScienceQuizActivity extends BaseActivity {
         submitButton = findViewById(R.id.submitButton);
 
         // Load all available quiz data
-        List<Quiz> allQuizzes = QuizRepository.getScienceQuizzes();
+        List<Quiz> allQuizzes = QuizRepository.getXScienceQuizzes();
 
         // Shuffle the quiz list to randomize questions
         Collections.shuffle(allQuizzes);
@@ -113,7 +113,6 @@ public class ScienceQuizActivity extends BaseActivity {
         }
     }
 
-    // Show the final score after the quiz is finished
     private void showFinalScore() {
         String finalScoreMessage;
 
@@ -125,12 +124,11 @@ public class ScienceQuizActivity extends BaseActivity {
             finalScoreMessage = "You will be good at Arts";
         }
 
-        // Pass the score and result message to the ResultActivity
         Intent intent = new Intent(ScienceQuizActivity.this, ResultActivity.class);
         intent.putExtra("score", score);
         intent.putExtra("resultMessage", finalScoreMessage);
         startActivity(intent);
-        finish(); // Finish the current activity
+        finish();
     }
 
 

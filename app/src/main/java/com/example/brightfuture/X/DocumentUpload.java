@@ -2,6 +2,7 @@ package com.example.brightfuture.X;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
@@ -31,6 +32,13 @@ public class DocumentUpload extends BaseActivity {
         super.onCreate(savedInstanceState);
 
         setChildLayout(R.layout.activity_document_upload);
+
+//        Retrieve selectedHobby from sharedPreferences
+        SharedPreferences sharedPreferences = getSharedPreferences("UserProfile", MODE_PRIVATE);
+        String selectedHobby = sharedPreferences.getString("selectedHobby", "No Hobby Selected");
+
+        Toast.makeText(this, "Selected Hobby: " + selectedHobby, Toast.LENGTH_SHORT).show();
+
 
         // Initialize buttons
         Button uploadX = findViewById(R.id.uploadMarksheetX);
@@ -66,8 +74,30 @@ public class DocumentUpload extends BaseActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(DocumentUpload.this, ScienceQuizActivity.class);
-                startActivity(intent);
+
+//                Adding different pages for navigation based on sharedPreferences
+
+                if(selectedHobby != null && !selectedHobby.equals("Enter your Interest")){
+                    Toast.makeText(DocumentUpload.this, "Selected Hobby: "+selectedHobby, Toast.LENGTH_SHORT).show();
+
+                    if(selectedHobby.equals("Science")){
+                        Intent intent = new Intent(DocumentUpload.this, ScienceQuizActivity.class);
+                        intent.putExtra("Selected Hobby", selectedHobby);
+                        startActivity(intent);
+                    } else if (selectedHobby.equals("Commerce")) {
+                        Intent intent = new Intent(DocumentUpload.this, CommerceQuizActivity.class);
+                        intent.putExtra("Selected Hobby", selectedHobby);
+                        startActivity(intent);
+                    }
+                    else{
+                        Intent intent = new Intent(DocumentUpload.this, ArtsQuizActivity.class);
+                        intent.putExtra("Selected Hobby", selectedHobby);
+                        startActivity(intent);
+                    }
+                }
+
+//                Intent intent = new Intent(DocumentUpload.this, ScienceQuizActivity.class);
+//                startActivity(intent);
             }
         });
     }

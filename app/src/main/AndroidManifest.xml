@@ -80,6 +80,12 @@
         <activity android:name=".X.ScienceQuizActivity"
             android:exported="true"/>
 
+        <activity android:name=".X.CommerceQuizActivity"
+            android:exported="true"/>
+
+        <activity android:name=".X.ArtsQuizActivity"
+            android:exported="true"/>
+
         <activity android:name=".XII.science.maths.MathsQuizActivity"
             android:exported="true"/>
 
@@ -101,7 +107,26 @@
         <activity android:name=".XII.RegardingSubject"
             android:exported="true"/>
 
+        <activity android:name=".XII.science.ScienceSubject11"
+            android:exported="true"/>
 
+        <activity android:name=".XII.science.ScienceSubject12"
+            android:exported="true"/>
+
+        <activity android:name=".XII.commerce.CommerceSubject11"
+            android:exported="true"/>
+
+        <activity android:name=".XII.commerce.CommerceSubject12"
+            android:exported="true"/>
+
+        <activity android:name=".XII.arts.ArtsSubject11"
+            android:exported="true"/>
+
+        <activity android:name=".XII.arts.ArtsSubject12"
+            android:exported="true"/>
+
+        <activity android:name=".ExtraCourse"
+            android:exported="true"/>
 
     </application>
 </manifest>

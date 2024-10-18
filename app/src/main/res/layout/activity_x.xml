@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:padding="16dp"
     android:gravity="center"
-    android:background="@drawable/pagebkg"
+    android:background="@color/lavender"
     tools:context=".auth.LoginActivity">
 
     <androidx.cardview.widget.CardView
@@ -73,20 +73,33 @@
                 android:textColor="@color/black"
                 android:textColorHint="@color/lavender" />
 
-            <EditText
-                android:id="@+id/hobby"
+<!--            <EditText-->
+<!--                android:id="@+id/hobby"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:background="@drawable/custom_edit_text"-->
+<!--                android:drawablePadding="8dp"-->
+<!--                android:hint="@string/yourHobby"-->
+<!--                android:inputType="text"-->
+<!--                android:padding="8dp"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textColorHint="@color/lavender" />-->
+
+            <Spinner
+                android:id="@+id/hobbySpinner"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="20dp"
+                android:entries="@array/hobby_array"
                 android:background="@drawable/custom_edit_text"
                 android:drawablePadding="8dp"
                 android:hint="@string/yourHobby"
-                android:inputType="text"
                 android:padding="8dp"
-                android:textColor="@color/black"
-                android:textColorHint="@color/lavender" />
+                android:backgroundTint="@color/lavender"
+                android:spinnerMode="dropdown" />
 
-            <!-- New Horizontal LinearLayout for buttons -->
+                        <!-- New Horizontal LinearLayout for buttons -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

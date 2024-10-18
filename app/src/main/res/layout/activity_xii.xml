@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:padding="16dp"
     android:gravity="center"
-    android:background="@drawable/pagebkg"
+    android:background="@color/lavender"
     tools:context=".auth.LoginActivity">
 
     <androidx.cardview.widget.CardView

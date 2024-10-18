@@ -13,6 +13,6 @@ public class CommerceSubject12 extends BaseActivity {
         super.onCreate(saveInstanceState);
         setChildLayout(R.layout.activity_commerece_subject12);
 
-        Toast.makeText(this, "Science 11", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Commerce 12", Toast.LENGTH_SHORT).show();
     }
 }

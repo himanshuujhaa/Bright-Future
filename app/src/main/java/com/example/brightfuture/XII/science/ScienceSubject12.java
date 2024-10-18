@@ -13,6 +13,6 @@ public class ScienceSubject12 extends BaseActivity {
         super.onCreate(saveInstanceState);
         setChildLayout(R.layout.activity_science_subject12);
 
-        Toast.makeText(this, "Science 11", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Science 12", Toast.LENGTH_SHORT).show();
     }
 }

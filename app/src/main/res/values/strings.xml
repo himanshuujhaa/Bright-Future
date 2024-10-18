@@ -28,7 +28,7 @@
     <string name="yourName">Enter Your Name</string>
     <string name="yourMobile">Entre Your Mobile no.</string>
     <string name="yourWhatsAppNo">Enter your WhatsApp no.</string>
-    <string name="yourHobby">Enter your Intrest</string>
+    <string name="yourHobby">Enter your Interest</string>
     <string name="yourPracticals"> Your Practicals</string>
     <string name="reset">Reset</string>
     <string name="next">Next</string>
@@ -75,6 +75,13 @@
 
     <string-array name="stream_array">
         <item>Select Your Course</item>
+        <item>Science</item>
+        <item>Commerce</item>
+        <item>Arts</item>
+    </string-array>
+
+    <string-array name="hobby_array">
+        <item>Select Your Hobby</item>
         <item>Science</item>
         <item>Commerce</item>
         <item>Arts</item>

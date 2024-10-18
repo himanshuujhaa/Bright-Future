@@ -6,7 +6,7 @@ import java.util.List;
 public class QuizRepository {
 
     // Returns a list of quizzes
-    public static List<Quiz> getScienceQuizzes() {
+    public static List<Quiz> getXScienceQuizzes() {
         List<Quiz> quizzes = new ArrayList<>();
 
         List<String> options1 = new ArrayList<>();
