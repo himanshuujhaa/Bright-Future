@@ -116,12 +116,11 @@ public class ScienceQuizActivity extends BaseActivity {
     private void showFinalScore() {
         String finalScoreMessage;
 
-        if (score >= 80) {
-            finalScoreMessage = "You will be good at Science";
-        } else if (score >= 60 && score < 80) {
-            finalScoreMessage = "You will be good at Commerce";
-        } else {
-            finalScoreMessage = "You will be good at Arts";
+        if (score >= 65) {
+            finalScoreMessage = "You are capable";
+        }
+        else {
+            finalScoreMessage = "You are not capable";
         }
 
         Intent intent = new Intent(ScienceQuizActivity.this, ResultActivity.class);

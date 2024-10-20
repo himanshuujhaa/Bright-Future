@@ -1,6 +1,7 @@
 package com.example.brightfuture.quiz;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class QuizRepository {
@@ -9,145 +10,1531 @@ public class QuizRepository {
     public static List<Quiz> getXScienceQuizzes() {
         List<Quiz> quizzes = new ArrayList<>();
 
+        // Question 1
         List<String> options1 = new ArrayList<>();
-        options1.add("Hydrogen");
-        options1.add("Oxygen");
-        options1.add("Carbon");
-        options1.add("Nitrogen");
-        quizzes.add(new Quiz("What is the most abundant element in the universe?", options1, "Hydrogen"));
+        options1.add("14");
+        options1.add("21");
+        options1.add("49");
+        options1.add("56");
+        quizzes.add(new Quiz("What is the value of 7^2?", options1, "49"));
 
+        // Question 2
         List<String> options2 = new ArrayList<>();
-        options2.add("Mercury");
-        options2.add("Mars");
-        options2.add("Venus");
-        options2.add("Earth");
-        quizzes.add(new Quiz("Which is the closest planet to the Sun?", options2, "Mercury"));
+        options2.add("90 degrees");
+        options2.add("180 degrees");
+        options2.add("360 degrees");
+        options2.add("270 degrees");
+        quizzes.add(new Quiz("The sum of the angles in a triangle is?", options2, "180 degrees"));
 
+        // Question 3
         List<String> options3 = new ArrayList<>();
-        options3.add("Oxygen");
-        options3.add("Carbon dioxide");
-        options3.add("Hydrogen");
-        options3.add("Carbon monoxide");
-        quizzes.add(new Quiz("Which gas is needed for photosynthesis?", options3, "Carbon dioxide"));
+        options3.add("154 cm²");
+        options3.add("144 cm²");
+        options3.add("100 cm²");
+        options3.add("200 cm²");
+        quizzes.add(new Quiz("What is the area of a circle with a radius of 7 cm? (Use π=22/7)", options3, "154 cm²"));
 
+        // Question 4
         List<String> options4 = new ArrayList<>();
-        options4.add("Light");
-        options4.add("Heat");
-        options4.add("Electrical");
-        options4.add("Electrical");
-        quizzes.add(new Quiz("What type of energy is required for photosynthesis to happen?", options4, "Light"));
+        options4.add("7");
+        options4.add("8");
+        options4.add("6");
+        options4.add("4");
+        quizzes.add(new Quiz("If x + 3 = 10, then x is:", options4, "7"));
 
+        // Question 5
         List<String> options5 = new ArrayList<>();
-        options5.add("Glucose");
-        options5.add("Oxygen");
-        options5.add("Carbon dioxide");
-        options5.add("None of the above");
-        quizzes.add(new Quiz("What is the waste by-product of photosynthesis?", options5, "Oxygen"));
+        options5.add("20");
+        options5.add("60");
+        options5.add("120");
+        options5.add("100");
+        quizzes.add(new Quiz("What is the value of 5! (5 factorial)?", options5, "120"));
 
+        // Question 6
         List<String> options6 = new ArrayList<>();
-        options6.add("The temperature must have been a limiting factor.");
-        options6.add("Carbon dioxide concentration must have been a limiting factor earlier.");
-        options6.add("Light intensity must have been a limiting factor.");
-        options6.add("None of the above");
-        quizzes.add(new Quiz("Tomatoes in a greenhouse grow faster if the carbon dioxide concentration is increased. Why is that?", options6, "Carbon dioxide concentration must have been a limiting factor earlier."));
+        options6.add("(3, 4, 5)");
+        options6.add("(5, 6, 7)");
+        options6.add("(1, 2, 3)");
+        options6.add("(2, 3, 4)");
+        quizzes.add(new Quiz("Which of the following is a Pythagorean triplet?", options6, "(3, 4, 5)"));
 
+        // Question 7
         List<String> options7 = new ArrayList<>();
-        options7.add("Oxygen + glucose → carbon dioxide + water");
-        options7.add("Carbon dioxide + oxygen → glucose + water");
-        options7.add("Carbon dioxide + water → glucose + oxygen");
-        options7.add("None of the above");
-        quizzes.add(new Quiz("What is the equation of photosynthesis?", options7, "Carbon dioxide + water → glucose + oxygen"));
+        options7.add("6");
+        options7.add("-6");
+        options7.add("5");
+        options7.add("-5");
+        quizzes.add(new Quiz("The product of the roots of the quadratic equation x² - 5x + 6 = 0 is:", options7, "6"));
 
+        // Question 8
         List<String> options8 = new ArrayList<>();
-        options8.add("To make proteins");
-        options8.add("To make fatty acids");
-        options8.add("To make starch for storage");
-        options8.add("To make chlorophyll");
-        quizzes.add(new Quiz("Why do plants need nitrate ions?", options8, "To make proteins"));
+        options8.add("15");
+        options8.add("21");
+        options8.add("17");
+        options8.add("25");
+        quizzes.add(new Quiz("Which of the following is a prime number?", options8, "17"));
 
+        // Question 9
         List<String> options9 = new ArrayList<>();
-        options9.add("6");
-        options9.add("4");
-        options9.add("7");
-        options9.add("16");
-        quizzes.add(new Quiz("Solve for x : 2x + y = 8, y= - 6", options9, "7"));
+        options9.add("2");
+        options9.add("3");
+        options9.add("-2");
+        options9.add("-3");
+        quizzes.add(new Quiz("The slope of a line represented by the equation y = 2x + 3 is:", options9, "2"));
 
+        // Question 10
         List<String> options10 = new ArrayList<>();
-        options10.add("Angle of triangle");
-        options10.add("Angle of elevation");
-        options10.add("Angle of depression");
-        options10.add("None of the these");
-        quizzes.add(new Quiz("When a point is observed, the angle formed by the line of sight with the horizontal level where the point being viewed is above the horizontal plane is known as:", options10, "Angle of elevation"));
+        options10.add("30 cm");
+        options10.add("25 cm");
+        options10.add("50 cm");
+        options10.add("40 cm");
+        quizzes.add(new Quiz("What is the perimeter of a rectangle with length 10 cm and width 5 cm?", options10, "30 cm"));
 
+        // Question 11
         List<String> options11 = new ArrayList<>();
-        options11.add("Positive");
-        options11.add("Negative");
-        options11.add("Both A and B");
-        options11.add("None of the above");
-        quizzes.add(new Quiz("The probability of an event can't be _______", options11, "Negative"));
+        options11.add("34/4");
+        options11.add("14/4");
+        options11.add("12/2");
+        options11.add("13/3");
+        quizzes.add(new Quiz("If the probability of an event occurring is 14 1/4, what is the probability of it not occurring?", options11, "34/4"));
 
+        // Question 12
         List<String> options12 = new ArrayList<>();
-        options12.add("1/2");
-        options12.add("1");
-        options12.add("1/3");
-        options12.add("1/10");
-        quizzes.add(new Quiz("In a lottery, there are 10 prizes and 20 blanks. What is the probability of getting a prize?", options12, "1/3"));
+        options12.add("10");
+        options12.add("12");
+        options12.add("14");
+        options12.add("16");
+        quizzes.add(new Quiz("What is the value of √144?", options12, "12"));
 
+        // Question 13
         List<String> options13 = new ArrayList<>();
-        options13.add("1250");
-        options13.add("1255");
-        options13.add("1355");
-        options13.add("1350");
-        quizzes.add(new Quiz("The HCF of two numbers, a and b, is 30, while their LCM is 45. What is the value of (a x b)?", options13, "1350"));
+        options13.add("32");
+        options13.add("35");
+        options13.add("30");
+        options13.add("28");
+        quizzes.add(new Quiz("In an arithmetic progression (AP), if the first term is 5 and the common difference is 3, what is the 10th term?", options13, "32"));
 
+        // Question 14
         List<String> options14 = new ArrayList<>();
-        options14.add("12");
-        options14.add("18");
+        options14.add("28");
         options14.add("20");
-        options14.add("22");
-        quizzes.add(new Quiz("Which term of the progression 4,9,14,…. is 109?", options14, "22"));
+        options14.add("25");
+        options14.add("30");
+        quizzes.add(new Quiz("The sum of the first 5 prime numbers is:", options14, "28"));
 
+        // Question 15
         List<String> options15 = new ArrayList<>();
-        options15.add("10");
-        options15.add("11");
-        options15.add("12");
-        options15.add("13");
-        quizzes.add(new Quiz("1+2+…+k=55, what is the value of k?", options15, "10"));
+        options15.add("x² + y² = 25");
+        options15.add("y = 3x + 1");
+        options15.add("x³ + y = 0");
+        options15.add("xy = 10");
+        quizzes.add(new Quiz("Which of the following represents a linear equation?", options15, "y = 3x + 1"));
 
+        // Question 16
         List<String> options16 = new ArrayList<>();
-        options16.add("13/5");
-        options16.add("17/5");
-        options16.add("14/5");
-        options16.add("1");
-        quizzes.add(new Quiz("If cot A = 12/5, then the value of (sin A + cos A) x cosec A is :", options16, "17/5"));
+        options16.add("9 cm³");
+        options16.add("27 cm³");
+        options16.add("18 cm³");
+        options16.add("30 cm³");
+        quizzes.add(new Quiz("What is the volume of a cube with a side length of 3 cm?", options16, "27 cm³"));
 
+        // Question 17
         List<String> options17 = new ArrayList<>();
-        options17.add("32");
-        options17.add("35");
-        options17.add("42");
-        options17.add("28");
-        quizzes.add(new Quiz("What is the 10th term of the sequence whose nth term is 3n-2?", options17, "28"));
+        options17.add("Equilateral");
+        options17.add("Isosceles");
+        options17.add("Scalene");
+        options17.add("Right");
+        quizzes.add(new Quiz("If the sides of a triangle are 3 cm, 4 cm, and 5 cm, what type of triangle is it?", options17, "Right"));
 
+        // Question 18
         List<String> options18 = new ArrayList<>();
-        options18.add("Leaf");
-        options18.add("Palisade");
-        options18.add("Chlorophyll");
-        options18.add("Chloroplasts");
-        quizzes.add(new Quiz("What is the substance that makes leaves look green?", options18, "Chlorophyll"));
+        options18.add("5");
+        options18.add("4");
+        options18.add("3");
+        options18.add("2");
+        quizzes.add(new Quiz("The distance between the points (2, 3) and (5, 7) is:", options18, "5"));
 
+        // Question 19
         List<String> options19 = new ArrayList<>();
-        options19.add("Roots");
-        options19.add("Palisade");
-        options19.add("Chloroplasts");
-        options19.add("None");
-        quizzes.add(new Quiz("Where does photosynthesis takes place in?", options19, "Chloroplasts"));
+        options19.add("0");
+        options19.add("1");
+        options19.add("undefined");
+        options19.add("45");
+        quizzes.add(new Quiz("What is the value of tan(45°)?", options19, "1"));
 
+        // Question 20
         List<String> options20 = new ArrayList<>();
-        options20.add("To provide oxygen for terrestrial life");
-        options20.add("To absorb and scatter solar ultraviolet light");
-        options20.add("To regulate the Earth’s temperature");
-        options20.add("To act as a shield against meteorites");
-        quizzes.add(new Quiz("What is the primary function of the ozone layer in the Earth's atmosphere?", options20, "To absorb and scatter solar ultraviolet light"));
+        options20.add("3 cm");
+        options20.add("4 cm");
+        options20.add("5 cm");
+        options20.add("6 cm");
+        quizzes.add(new Quiz("In a right-angled triangle, if one angle is 30 degrees and the hypotenuse is 10 cm, what is the length of the opposite side?", options20, "5 cm"));
+
+        // Question 21
+        List<String> options21 = new ArrayList<>();
+        options21.add("-3");
+        options21.add("-6");
+        options21.add("3");
+        options21.add("0");
+        quizzes.add(new Quiz("The roots of the equation x² + 6x + 9 = 0 are:", options21, "-3"));
+
+        // Question 22
+        List<String> options22 = new ArrayList<>();
+        options22.add("Straight line");
+        options22.add("Circle");
+        options22.add("Parabola");
+        options22.add("Hyperbola");
+        quizzes.add(new Quiz("The graph of a quadratic function is a:", options22, "Parabola"));
+
+        // Question 23
+        List<String> options23 = new ArrayList<>();
+        options23.add("31.4 cm");
+        options23.add("28 cm");
+        options23.add("25 cm");
+        options23.add("20 cm");
+        quizzes.add(new Quiz("What is the circumference of a circle with a diameter of 10 cm? (Use π=3.14)", options23, "31.4 cm"));
+
+        // Question 24
+        List<String> options24 = new ArrayList<>();
+        options24.add("13");
+        options24.add("11");
+        options24.add("9");
+        options24.add("8");
+        quizzes.add(new Quiz("If a=2 and b=3, what is the value of a² + b²?", options24, "13"));
+
+        // Question 25
+        List<String> options25 = new ArrayList<>();
+        options25.add("90 degrees");
+        options25.add("180 degrees");
+        options25.add("30 degrees");
+        options25.add("45 degrees");
+        quizzes.add(new Quiz("The angle between the hour and minute hand of a clock at 3:00 is:", options25, "90 degrees"));
+
+        quizzes.add(new Quiz("What is the chemical formula of water?",
+                Arrays.asList("a) H2O", "b) CO2", "c) O2", "d) H2"), "a) H2O"));
+
+        quizzes.add(new Quiz("Which of the following is a non-renewable source of energy?",
+                Arrays.asList("a) Solar energy", "b) Wind energy", "c) Coal", "d) Biomass"), "c) Coal"));
+
+        quizzes.add(new Quiz("The unit of force in the International System of Units (SI) is:",
+                Arrays.asList("a) Joule", "b) Newton", "c) Pascal", "d) Watt"), "b) Newton"));
+
+        quizzes.add(new Quiz("What is the process by which plants make their own food called?",
+                Arrays.asList("a) Respiration", "b) Photosynthesis", "c) Fermentation", "d) Digestion"), "b) Photosynthesis"));
+
+        quizzes.add(new Quiz("Which of the following is a type of friction?",
+                Arrays.asList("a) Static friction", "b) Kinetic friction", "c) Rolling friction", "d) All of the above"), "d) All of the above"));
+
+        quizzes.add(new Quiz("What is the main function of red blood cells?",
+                Arrays.asList("a) To fight infections", "b) To transport oxygen", "c) To clot blood", "d) To produce hormones"), "b) To transport oxygen"));
+
+        quizzes.add(new Quiz("Which organ is responsible for filtering blood in the human body?",
+                Arrays.asList("a) Heart", "b) Liver", "c) Kidney", "d) Lungs"), "c) Kidney"));
+
+        quizzes.add(new Quiz("What type of bond is formed when two atoms share electrons?",
+                Arrays.asList("a) Ionic bond", "b) Covalent bond", "c) Metallic bond", "d) Hydrogen bond"), "b) Covalent bond"));
+
+        quizzes.add(new Quiz("The smallest unit of an element that retains its properties is called:",
+                Arrays.asList("a) Molecule", "b) Atom", "c) Ion", "d) Compound"), "b) Atom"));
+
+        quizzes.add(new Quiz("Which of the following is a greenhouse gas?",
+                Arrays.asList("a) Oxygen", "b) Nitrogen", "c) Carbon dioxide", "d) Hydrogen"), "c) Carbon dioxide"));
+
+        quizzes.add(new Quiz("In which part of the plant does photosynthesis primarily take place?",
+                Arrays.asList("a) Roots", "b) Stem", "c) Leaves", "d) Flowers"), "c) Leaves"));
+
+        quizzes.add(new Quiz("What is the pH value of a neutral solution?",
+                Arrays.asList("a) 0", "b) 7", "c) 14", "d) 5"), "b) 7"));
+
+        quizzes.add(new Quiz("Which gas is produced during photosynthesis?",
+                Arrays.asList("a) Oxygen", "b) Carbon dioxide", "c) Nitrogen", "d) Hydrogen"), "a) Oxygen"));
+
+        quizzes.add(new Quiz("The force of attraction between two masses is called:",
+                Arrays.asList("a) Gravitational force", "b) Electromagnetic force", "c) Nuclear force", "d) Frictional force"), "a) Gravitational force"));
+
+        quizzes.add(new Quiz("Which of the following is a renewable source of energy?",
+                Arrays.asList("a) Natural gas", "b) Wind energy", "c) Nuclear energy", "d) Fossil fuels"), "b) Wind energy"));
+
+        quizzes.add(new Quiz("What is the boiling point of water at standard atmospheric pressure?",
+                Arrays.asList("a) 50°C", "b) 100°C", "c) 150°C", "d) 200°C"), "b) 100°C"));
+
+        quizzes.add(new Quiz("Which organelle is known as the powerhouse of the cell?",
+                Arrays.asList("a) Nucleus", "b) Ribosome", "c) Mitochondria", "d) Chloroplast"), "c) Mitochondria"));
+
+        quizzes.add(new Quiz("The change of state from liquid to gas is called:",
+                Arrays.asList("a) Condensation", "b) Evaporation", "c) Sublimation", "d) Freezing"), "b) Evaporation"));
+
+        quizzes.add(new Quiz("What is the main component of the Earth's atmosphere?",
+                Arrays.asList("a) Oxygen", "b) Carbon dioxide", "c) Nitrogen", "d) Argon"), "c) Nitrogen"));
+
+        quizzes.add(new Quiz("Which part of the brain is responsible for coordination and balance?",
+                Arrays.asList("a) Cerebrum", "b) Cerebellum", "c) Brainstem", "d) Thalamus"), "b) Cerebellum"));
+
+        quizzes.add(new Quiz("The formula for calculating speed is:",
+                Arrays.asList("a) Distance × Time", "b) Distance / Time", "c) Time / Distance", "d) Distance + Time"), "b) Distance / Time"));
+
+        quizzes.add(new Quiz("Which of the following is a characteristic of metals?",
+                Arrays.asList("a) Brittle", "b) Good conductors of heat and electricity", "c) Dull appearance", "d) Low density"), "b) Good conductors of heat and electricity"));
+
+        quizzes.add(new Quiz("Which type of energy is stored in food?",
+                Arrays.asList("a) Kinetic energy", "b) Potential energy", "c) Chemical energy", "d) Thermal energy"), "c) Chemical energy"));
+
+        quizzes.add(new Quiz("What is the primary function of the small intestine?",
+                Arrays.asList("a) To absorb nutrients", "b) To digest food", "c) To filter blood", "d) To store waste"), "a) To absorb nutrients"));
+
+        quizzes.add(new Quiz("What type of reaction occurs when an acid reacts with a base?",
+                Arrays.asList("a) Oxidation", "b) Reduction", "c) Neutralization", "d) Hydrolysis"), "c) Neutralization"));
+
+        // English Quiz
+        quizzes.add(new Quiz("Who is the author of 'The Diary of a Young Girl'?",
+                Arrays.asList("a) Anne Frank", "b) Mark Twain", "c) J.K. Rowling", "d) George Orwell"), "a) Anne Frank"));
+
+        quizzes.add(new Quiz("What is the main theme of the poem 'If—' by Rudyard Kipling?",
+                Arrays.asList("a) Success and failure", "b) Love and friendship", "c) War and peace", "d) Nature and beauty"), "a) Success and failure"));
+
+        quizzes.add(new Quiz("In Shakespeare's play 'Romeo and Juliet,' what are the names of the two feuding families?",
+                Arrays.asList("a) Montague and Capulet", "b) Capulet and Veron", "c) Montague and Mercutio", "d) Capulet and Paris"), "a) Montague and Capulet"));
+
+        quizzes.add(new Quiz("Which literary device involves giving human traits to non-human entities?",
+                Arrays.asList("a) Metaphor", "b) Personification", "c) Simile", "d) Alliteration"), "b) Personification"));
+
+        quizzes.add(new Quiz("What is the primary purpose of a thesis statement in an essay?",
+                Arrays.asList("a) To entertain", "b) To summarize", "c) To present the main argument", "d) To conclude"), "c) To present the main argument"));
+
+        quizzes.add(new Quiz("In the story 'The Necklace,' what does Madame Loisel lose?",
+                Arrays.asList("a) A ring", "b) A necklace", "c) A bracelet", "d) A pair of earrings"), "b) A necklace"));
+
+        quizzes.add(new Quiz("Which of the following is an example of an oxymoron?",
+                Arrays.asList("a) Bitter sweet", "b) Tall short", "c) Bright darkness", "d) Fast slow"), "a) Bitter sweet"));
+
+        quizzes.add(new Quiz("In 'The Adventures of Tom Sawyer,' what is Tom's greatest adventure?",
+                Arrays.asList("a) Finding treasure", "b) Running away from home", "c) Going to school", "d) Witnessing a murder"), "a) Finding treasure"));
+
+        quizzes.add(new Quiz("What is a synonym for 'benevolent'?",
+                Arrays.asList("a) Kind", "b) Evil", "c) Indifferent", "d) Angry"), "a) Kind"));
+
+        quizzes.add(new Quiz("Which figure of speech compares two unlike things using 'like' or 'as'?",
+                Arrays.asList("a) Metaphor", "b) Simile", "c) Hyperbole", "d) Personification"), "b) Simile"));
+
+        quizzes.add(new Quiz("What is the setting of the novel 'To Kill a Mockingbird'?",
+                Arrays.asList("a) Maycomb, Alabama", "b) New York City", "c) London", "d) Boston"), "a) Maycomb, Alabama"));
+
+        quizzes.add(new Quiz("What does the term 'theme' refer to in literature?",
+                Arrays.asList("a) The main character", "b) The underlying message", "c) The plot", "d) The setting"), "b) The underlying message"));
+
+        quizzes.add(new Quiz("Which of the following is an example of alliteration?",
+                Arrays.asList("a) She sells sea shells by the sea shore", "b) The wind whispered softly", "c) The sun shone brightly", "d) Time flies"), "a) She sells sea shells by the sea shore"));
+
+        quizzes.add(new Quiz("In which genre of literature would you typically find a plot twist?",
+                Arrays.asList("a) Romance", "b) Mystery", "c) Biography", "d) Poetry"), "b) Mystery"));
+
+        quizzes.add(new Quiz("What is the primary function of a conclusion in an essay?",
+                Arrays.asList("a) To introduce new ideas", "b) To summarize and close the argument", "c) To provide evidence", "d) To present the thesis"), "b) To summarize and close the argument"));
+
+        quizzes.add(new Quiz("In poetry, a 'stanza' is equivalent to a:",
+                Arrays.asList("a) Sentence", "b) Paragraph", "c) Chapter", "d) Line"), "b) Paragraph"));
+
+        quizzes.add(new Quiz("Which of the following is a classic novel written by F. Scott Fitzgerald?",
+                Arrays.asList("a) The Great Gatsby", "b) 1984", "c) Moby Dick", "d) Pride and Prejudice"), "a) The Great Gatsby"));
+
+        quizzes.add(new Quiz("What type of poem is typically 14 lines long?",
+                Arrays.asList("a) Haiku", "b) Limerick", "c) Sonnet", "d) Ode"), "c) Sonnet"));
+
+        quizzes.add(new Quiz("In 'Pride and Prejudice', who is Elizabeth Bennet's love interest?",
+                Arrays.asList("a) Mr. Collins", "b) Mr. Darcy", "c) Mr. Wickham", "d) Mr. Bingley"), "b) Mr. Darcy"));
+
+        quizzes.add(new Quiz("What is the main conflict in 'The Catcher in the Rye'?",
+                Arrays.asList("a) Man vs. nature", "b) Man vs. society", "c) Man vs. himself", "d) Man vs. fate"), "c) Man vs. himself"));
+
+
+        return quizzes;
+    }
+
+    public static List<Quiz> getXCommerceQuizzes() {
+        List<Quiz> quizzes = new ArrayList<>();
+
+        // Question 1
+        List<String> options1 = new ArrayList<>();
+        options1.add("Pause in a sentence");
+        options1.add("Poetry");
+        options1.add("Title");
+        options1.add("End of a sentence");
+        quizzes.add(new Quiz("When is punctuation used?", options1, "End of a sentence"));
+
+        // Question 2
+        List<String> options2 = new ArrayList<>();
+        options2.add("Kavi Naresh");
+        options2.add("Kavi Hemant");
+        options2.add("Kavi Mahesh");
+        options2.add("Kavi Kailash");
+        quizzes.add(new Quiz("Who wrote 'Saraswati'?", options2, "Kavi Naresh"));
+
+        // Question 3
+        List<String> options3 = new ArrayList<>();
+        options3.add("Song");
+        options3.add("Novel");
+        options3.add("Play");
+        options3.add("Poem");
+        quizzes.add(new Quiz("What does the word 'Kavya' mean?", options3, "Poem"));
+
+        // Question 4
+        List<String> options4 = new ArrayList<>();
+        options4.add("Kantidas");
+        options4.add("Narsinh Mehta");
+        options4.add("Manibhai");
+        options4.add("A poet from South India");
+        quizzes.add(new Quiz("Who is considered the father of Gujarati literature?", options4, "Narsinh Mehta"));
+
+        // Question 5
+        List<String> options5 = new ArrayList<>();
+        options5.add("Education");
+        options5.add("Tradition");
+        options5.add("Thought");
+        options5.add("Music");
+        quizzes.add(new Quiz("What is the meaning of 'Samskar'?", options5, "Tradition"));
+
+        // Question 6
+        List<String> options6 = new ArrayList<>();
+        options6.add("Dog");
+        options6.add("Tiger");
+        options6.add("Wild animal");
+        options6.add("Fish");
+        quizzes.add(new Quiz("What does 'Harina' mean?", options6, "Wild animal"));
+
+        // Question 7
+        List<String> options7 = new ArrayList<>();
+        options7.add("Creation of poetry");
+        options7.add("Approach to thought");
+        options7.add("Beauty of language");
+        options7.add("Literary equality");
+        quizzes.add(new Quiz("What is the importance of 'Alankaran' in poetry?", options7, "Beauty of language"));
+
+        // Question 8
+        List<String> options8 = new ArrayList<>();
+        options8.add("Sun");
+        options8.add("Cloud");
+        options8.add("Sky");
+        options8.add("Horizon");
+        quizzes.add(new Quiz("What is a synonym for 'Akash' in Gujarati?", options8, "Sky"));
+
+        // Question 9
+        List<String> options9 = new ArrayList<>();
+        options9.add("A devotee");
+        options9.add("A poet");
+        options9.add("A text");
+        options9.add("A historian");
+        quizzes.add(new Quiz("Who was 'Tulsidas'?", options9, "A poet"));
+
+        // Question 10
+        List<String> options10 = new ArrayList<>();
+        options10.add("Shankar");
+        options10.add("Narsinh Mehta");
+        options10.add("Kabir");
+        options10.add("Rabindranath Tagore");
+        quizzes.add(new Quiz("Who is the author of the poem 'Vaisnav Jan To'?", options10, "Narsinh Mehta"));
+
+        // Question 11
+        List<String> options11 = new ArrayList<>();
+        options11.add("Incomplete");
+        options11.add("Complete");
+        options11.add("Inappropriate");
+        options11.add("Wrong");
+        quizzes.add(new Quiz("What does the word 'Samyak' mean?", options11, "Complete"));
+
+        // Question 12
+        List<String> options12 = new ArrayList<>();
+        options12.add("Thoughts");
+        options12.add("Opinion");
+        options12.add("Approach");
+        options12.add("Knowledge");
+        quizzes.add(new Quiz("What is the meaning of 'Abhipray'?", options12, "Opinion"));
+
+        // Question 13
+        List<String> options13 = new ArrayList<>();
+        options13.add("Beautiful");
+        options13.add("Weak");
+        options13.add("Ugly");
+        options13.add("Magnificent");
+        quizzes.add(new Quiz("What is the antonym of 'Sundar'?", options13, "Ugly"));
+
+        // Question 14
+        List<String> options14 = new ArrayList<>();
+        options14.add("Lamp");
+        options14.add("Devotee");
+        options14.add("Disciple");
+        options14.add("Ascetic");
+        quizzes.add(new Quiz("What does 'Tapsvi' mean?", options14, "Ascetic"));
+
+        // Question 15
+        List<String> options15 = new ArrayList<>();
+        options15.add("River");
+        options15.add("Water");
+        options15.add("Pond");
+        options15.add("Lake");
+        quizzes.add(new Quiz("What does 'Jal' mean?", options15, "Water"));
+
+        // Question 16
+        List<String> options16 = new ArrayList<>();
+        options16.add("Folk tale");
+        options16.add("Literature");
+        options16.add("Music");
+        options16.add("Imagination");
+        quizzes.add(new Quiz("What is poetry referred to as?", options16, "Literature"));
+
+        // Question 17
+        List<String> options17 = new ArrayList<>();
+        options17.add("Leadership");
+        options17.add("Truthfulness");
+        options17.add("Religion");
+        options17.add("Competence");
+        quizzes.add(new Quiz("What does 'Naitikta' mean?", options17, "Truthfulness"));
+
+        // Question 18
+        List<String> options18 = new ArrayList<>();
+        options18.add("Vision");
+        options18.add("Example");
+        options18.add("Lack of vision");
+        options18.add("Visionary");
+        quizzes.add(new Quiz("What does 'Drashti' mean?", options18, "Vision"));
+
+        // Question 19
+        List<String> options19 = new ArrayList<>();
+        options19.add("Language");
+        options19.add("Reality");
+        options19.add("Creativity");
+        options19.add("Composition");
+        quizzes.add(new Quiz("What is the significance of 'Shabd' (word)?", options19, "Language"));
+
+        // Question 20
+        List<String> options20 = new ArrayList<>();
+        options20.add("Teaching");
+        options20.add("Knowledge");
+        options20.add("Study");
+        options20.add("Curriculum");
+        quizzes.add(new Quiz("What does 'Shikshan' mean?", options20, "Teaching"));
+
+        // Question 21
+        List<String> options21 = new ArrayList<>();
+        options21.add("Sorrow");
+        options21.add("Pain");
+        options21.add("Hatred");
+        options21.add("Severity");
+        quizzes.add(new Quiz("What is the antonym of 'Prem'?", options21, "Hatred"));
+
+        // Question 22
+        List<String> options22 = new ArrayList<>();
+        options22.add("Poetry");
+        options22.add("Story");
+        options22.add("Song");
+        options22.add("Narrative");
+        quizzes.add(new Quiz("What does 'Gatha' mean?", options22, "Story"));
+
+        // Question 23
+        List<String> options23 = new ArrayList<>();
+        options23.add("Sanskrit");
+        options23.add("Hindi");
+        options23.add("Gujarati");
+        options23.add("English");
+        quizzes.add(new Quiz("In which language is 'Dev' referenced?", options23, "Sanskrit"));
+
+        // Question 24
+        List<String> options24 = new ArrayList<>();
+        options24.add("Old");
+        options24.add("New ideas");
+        options24.add("Wealth");
+        options24.add("Tradition");
+        quizzes.add(new Quiz("What does 'Aadhunikta' mean?", options24, "New ideas"));
+
+        // Question 25
+        List<String> options25 = new ArrayList<>();
+        options25.add("Respect");
+        options25.add("Insult");
+        options25.add("Indifference");
+        options25.add("Disregard");
+        quizzes.add(new Quiz("What is the antonym of 'Aadar'?", options25, "Insult"));
+
+        List<String> options26 = new ArrayList<>();
+        options26.add("Right to Property");
+        options26.add("Right to Equality");
+        options26.add("Right to Work");
+        options26.add("Right to Education");
+        quizzes.add(new Quiz("Which of the following is a fundamental right in India?", options26, "Right to Equality"));
+
+        // Question 3
+        List<String> options27 = new ArrayList<>();
+        options27.add("1912");
+        options27.add("1914");
+        options27.add("1916");
+        options27.add("1918");
+        quizzes.add(new Quiz("The First World War began in which year?", options27, "1914"));
+
+        // Question 4
+        List<String> options28 = new ArrayList<>();
+        options28.add("USA and Japan");
+        options28.add("USA and USSR");
+        options28.add("China and India");
+        options28.add("France and Germany");
+        quizzes.add(new Quiz("The term 'Cold War' refers to the tension between which two groups?", options28, "USA and USSR"));
+
+        // Question 5
+        List<String> options29 = new ArrayList<>();
+        options29.add("1885");
+        options29.add("1905");
+        options29.add("1915");
+        options29.add("1920");
+        quizzes.add(new Quiz("The Indian National Congress was founded in which year?", options29, "1885"));
+
+        // Question 6
+        List<String> options30 = new ArrayList<>();
+        options30.add("Industrial growth");
+        options30.add("Agricultural productivity");
+        options30.add("Urban development");
+        options30.add("Environmental conservation");
+        quizzes.add(new Quiz("What does the term 'Green Revolution' refer to?", options30, "Agricultural productivity"));
+
+        // Question 7
+        List<String> options31 = new ArrayList<>();
+        options31.add("Article 15");
+        options31.add("Article 17");
+        options31.add("Article 21");
+        options31.add("Article 25");
+        quizzes.add(new Quiz("Which article of the Indian Constitution provides for the abolition of untouchability?", options31, "Article 17"));
+
+        // Question 8
+        List<String> options32 = new ArrayList<>();
+        options32.add("Sardar Patel");
+        options32.add("Jawaharlal Nehru");
+        options32.add("Mahatma Gandhi");
+        options32.add("Lal Bahadur Shastri");
+        quizzes.add(new Quiz("Who was the first Prime Minister of India?", options32, "Jawaharlal Nehru"));
+
+        // Question 9
+        List<String> options33 = new ArrayList<>();
+        options33.add("Mumbai");
+        options33.add("Kolkata");
+        options33.add("New Delhi");
+        options33.add("Bengaluru");
+        quizzes.add(new Quiz("What is the capital of India?", options33, "New Delhi"));
+
+        // Question 10
+        List<String> options34 = new ArrayList<>();
+        options34.add("1915");
+        options34.add("1919");
+        options34.add("1920");
+        options34.add("1930");
+        quizzes.add(new Quiz("The 'Rowlatt Act' was enacted in which year?", options34, "1919"));
+
+        // Question 11
+        List<String> options35 = new ArrayList<>();
+        options35.add("Non-Cooperation Movement");
+        options35.add("Civil Disobedience Movement");
+        options35.add("Quit India Movement");
+        options35.add("Salt March");
+        quizzes.add(new Quiz("Which movement was launched by Mahatma Gandhi in 1920?", options35, "Non-Cooperation Movement"));
+
+        // Question 12
+        List<String> options36 = new ArrayList<>();
+        options36.add("January 1, 1950");
+        options36.add("January 26, 1950");
+        options36.add("March 15, 1950");
+        options36.add("August 15, 1947");
+        quizzes.add(new Quiz("The Constitution of India came into effect on which date?", options36, "January 26, 1950"));
+
+        // Question 13
+        List<String> options37 = new ArrayList<>();
+        options37.add("Centralization of power");
+        options37.add("Division of powers");
+        options37.add("Unitary system");
+        options37.add("Single-tier government");
+        quizzes.add(new Quiz("Which of the following is a feature of a federal government?", options37, "Division of powers"));
+
+        // Question 14
+        List<String> options38 = new ArrayList<>();
+        options38.add("Urban development");
+        options38.add("Rural employment");
+        options38.add("Industrial growth");
+        options38.add("Educational reform");
+        quizzes.add(new Quiz("What is the primary objective of the 'Mahatma Gandhi National Rural Employment Guarantee Act (MGNREGA)'?", options38, "Rural employment"));
+
+        // Question 15
+        List<String> options39 = new ArrayList<>();
+        options39.add("France");
+        options39.add("USA");
+        options39.add("England");
+        options39.add("Germany");
+        quizzes.add(new Quiz("The Industrial Revolution began in which country?", options39, "England"));
+
+        // Question 16
+        List<String> options40 = new ArrayList<>();
+        options40.add("B.R. Ambedkar");
+        options40.add("Mahatma Gandhi");
+        options40.add("Jawaharlal Nehru");
+        options40.add("Sardar Patel");
+        quizzes.add(new Quiz("Who is known as the 'Father of the Indian Constitution'?", options40, "B.R. Ambedkar"));
+
+        // Question 17
+        List<String> options41 = new ArrayList<>();
+        options41.add("Battle of Plassey");
+        options41.add("Battle of Buxar");
+        options41.add("Battle of Panipat");
+        options41.add("Battle of Haldighati");
+        quizzes.add(new Quiz("Which battle marked the beginning of British rule in India?", options41, "Battle of Plassey"));
+
+        // Question 18
+        List<String> options42 = new ArrayList<>();
+        options42.add("1920");
+        options42.add("1930");
+        options42.add("1942");
+        options42.add("1947");
+        quizzes.add(new Quiz("The 'Civil Disobedience Movement' was launched in which year?", options42, "1930"));
+
+        // Question 19
+        List<String> options43 = new ArrayList<>();
+        options43.add("Solar energy");
+        options43.add("Wind energy");
+        options43.add("Coal");
+        options43.add("Biomass");
+        quizzes.add(new Quiz("Which of the following is a non-renewable resource?", options43, "Coal"));
+
+        // Question 20
+        List<String> options44 = new ArrayList<>();
+        options44.add("1945");
+        options44.add("1950");
+        options44.add("1960");
+        options44.add("1970");
+        quizzes.add(new Quiz("The United Nations was established in which year?", options44, "1945"));
+
+        // Question 21
+        List<String> options45 = new ArrayList<>();
+        options45.add("High Court");
+        options45.add("Supreme Court");
+        options45.add("District Court");
+        options45.add("Tribunal");
+        quizzes.add(new Quiz("Which is the highest judicial authority in India?", options45, "Supreme Court"));
+
+        // Question 22
+        List<String> options46 = new ArrayList<>();
+        options46.add("Non-violent resistance");
+        options46.add("Armed rebellion");
+        options46.add("Silent protest");
+        options46.add("Economic boycott");
+        quizzes.add(new Quiz("The term 'Satyagraha' means:", options46, "Non-violent resistance"));
+
+        // Question 23
+        List<String> options47 = new ArrayList<>();
+        options47.add("Single party rule");
+        options47.add("Free and fair elections");
+        options47.add("Centralized power");
+        options47.add("Limited citizen participation");
+        quizzes.add(new Quiz("Which is a main feature of democracy?", options47, "Free and fair elections"));
+
+        // Question 24
+        List<String> options48 = new ArrayList<>();
+        options48.add("Taxation");
+        options48.add("Loans");
+        options48.add("Foreign aid");
+        options48.add("Investments");
+        quizzes.add(new Quiz("Which is the main source of income for the government of India?", options48, "Taxation"));
+
+        // Question 25
+        List<String> options49 = new ArrayList<>();
+        options49.add("1920s");
+        options49.add("1930s");
+        options49.add("1940s");
+        options49.add("1950s");
+        quizzes.add(new Quiz("The Great Depression occurred in which decade?", options49, "1930s"));
+
+        // Question 26
+        List<String> options50 = new ArrayList<>();
+        options50.add("Bhagat Singh");
+        options50.add("Subhas Chandra Bose");
+        options50.add("Rajendra Prasad");
+        options50.add("Sardar Vallabhbhai Patel");
+        quizzes.add(new Quiz("Who was the leader of the Indian National Army (INA)?", options50, "Subhas Chandra Bose"));
+
+        List<String> options51 = new ArrayList<>();
+        options51.add("14");
+        options51.add("21");
+        options51.add("49");
+        options51.add("56");
+        quizzes.add(new Quiz("What is the value of 7^2?", options51, "49"));
+
+        // Question 2
+        List<String> options52 = new ArrayList<>();
+        options52.add("90 degrees");
+        options52.add("180 degrees");
+        options52.add("360 degrees");
+        options52.add("270 degrees");
+        quizzes.add(new Quiz("The sum of the angles in a triangle is?", options52, "180 degrees"));
+
+        // Question 3
+        List<String> options53 = new ArrayList<>();
+        options53.add("154 cm²");
+        options53.add("144 cm²");
+        options53.add("100 cm²");
+        options53.add("200 cm²");
+        quizzes.add(new Quiz("What is the area of a circle with a radius of 7 cm? (Use π=22/7)", options53, "154 cm²"));
+
+        // Question 4
+        List<String> options54 = new ArrayList<>();
+        options54.add("7");
+        options54.add("8");
+        options54.add("6");
+        options54.add("4");
+        quizzes.add(new Quiz("If x + 3 = 10, then x is:", options54, "7"));
+
+        // Question 5
+        List<String> options55 = new ArrayList<>();
+        options55.add("20");
+        options55.add("60");
+        options55.add("120");
+        options55.add("100");
+        quizzes.add(new Quiz("What is the value of 5! (5 factorial)?", options55, "120"));
+
+        // Question 6
+        List<String> options56 = new ArrayList<>();
+        options56.add("(3, 4, 5)");
+        options56.add("(5, 6, 7)");
+        options56.add("(1, 2, 3)");
+        options56.add("(2, 3, 4)");
+        quizzes.add(new Quiz("Which of the following is a Pythagorean triplet?", options56, "(3, 4, 5)"));
+
+        // Question 7
+        List<String> options57 = new ArrayList<>();
+        options57.add("6");
+        options57.add("-6");
+        options57.add("5");
+        options57.add("-5");
+        quizzes.add(new Quiz("The product of the roots of the quadratic equation x² - 5x + 6 = 0 is:", options57, "6"));
+
+        // Question 8
+        List<String> options58 = new ArrayList<>();
+        options58.add("15");
+        options58.add("21");
+        options58.add("17");
+        options58.add("25");
+        quizzes.add(new Quiz("Which of the following is a prime number?", options58, "17"));
+
+        // Question 9
+        List<String> options59 = new ArrayList<>();
+        options59.add("2");
+        options59.add("3");
+        options59.add("-2");
+        options59.add("-3");
+        quizzes.add(new Quiz("The slope of a line represented by the equation y = 2x + 3 is:", options59, "2"));
+
+        // Question 10
+        List<String> options60 = new ArrayList<>();
+        options60.add("30 cm");
+        options60.add("25 cm");
+        options60.add("50 cm");
+        options60.add("40 cm");
+        quizzes.add(new Quiz("What is the perimeter of a rectangle with length 10 cm and width 5 cm?", options60, "30 cm"));
+
+        // Question 11
+        List<String> options61 = new ArrayList<>();
+        options61.add("34/4");
+        options61.add("14/4");
+        options61.add("12/2");
+        options61.add("13/3");
+        quizzes.add(new Quiz("If the probability of an event occurring is 14 1/4, what is the probability of it not occurring?", options61, "34/4"));
+
+        // Question 12
+        List<String> options62 = new ArrayList<>();
+        options62.add("10");
+        options62.add("12");
+        options62.add("14");
+        options62.add("16");
+        quizzes.add(new Quiz("What is the value of √144?", options62, "12"));
+
+        // Question 13
+        List<String> options63 = new ArrayList<>();
+        options63.add("32");
+        options63.add("35");
+        options63.add("30");
+        options63.add("28");
+        quizzes.add(new Quiz("In an arithmetic progression (AP), if the first term is 5 and the common difference is 3, what is the 10th term?", options63, "32"));
+
+        // Question 14
+        List<String> options64 = new ArrayList<>();
+        options64.add("28");
+        options64.add("20");
+        options64.add("25");
+        options64.add("30");
+        quizzes.add(new Quiz("The sum of the first 5 prime numbers is:", options64, "28"));
+
+        // Question 15
+        List<String> options65 = new ArrayList<>();
+        options65.add("x² + y² = 25");
+        options65.add("y = 3x + 1");
+        options65.add("x³ + y = 0");
+        options65.add("xy = 10");
+        quizzes.add(new Quiz("Which of the following represents a linear equation?", options65, "y = 3x + 1"));
+
+        // Question 16
+        List<String> options66 = new ArrayList<>();
+        options66.add("9 cm³");
+        options66.add("27 cm³");
+        options66.add("18 cm³");
+        options66.add("30 cm³");
+        quizzes.add(new Quiz("What is the volume of a cube with a side length of 3 cm?", options66, "27 cm³"));
+
+        // Question 17
+        List<String> options67 = new ArrayList<>();
+        options67.add("Equilateral");
+        options67.add("Isosceles");
+        options67.add("Scalene");
+        options67.add("Right");
+        quizzes.add(new Quiz("If the sides of a triangle are 3 cm, 4 cm, and 5 cm, what type of triangle is it?", options67, "Right"));
+
+        // Question 18
+        List<String> options68 = new ArrayList<>();
+        options68.add("5");
+        options68.add("4");
+        options68.add("3");
+        options68.add("2");
+        quizzes.add(new Quiz("The distance between the points (2, 3) and (5, 7) is:", options68, "5"));
+
+        // Question 19
+        List<String> options69 = new ArrayList<>();
+        options69.add("0");
+        options69.add("1");
+        options69.add("undefined");
+        options69.add("45");
+        quizzes.add(new Quiz("What is the value of tan(45°)?", options69, "1"));
+
+        // Question 20
+        List<String> options70 = new ArrayList<>();
+        options70.add("3 cm");
+        options70.add("4 cm");
+        options70.add("5 cm");
+        options70.add("6 cm");
+        quizzes.add(new Quiz("In a right-angled triangle, if one angle is 30 degrees and the hypotenuse is 10 cm, what is the length of the opposite side?", options70, "5 cm"));
+
+        // Question 21
+        List<String> options71 = new ArrayList<>();
+        options71.add("-3");
+        options71.add("-6");
+        options71.add("3");
+        options71.add("0");
+        quizzes.add(new Quiz("The roots of the equation x² + 6x + 9 = 0 are:", options71, "-3"));
+
+        // Question 22
+        List<String> options72 = new ArrayList<>();
+        options72.add("Straight line");
+        options72.add("Circle");
+        options72.add("Parabola");
+        options72.add("Hyperbola");
+        quizzes.add(new Quiz("The graph of a quadratic function is a:", options72, "Parabola"));
+
+        // Question 23
+        List<String> options73 = new ArrayList<>();
+        options73.add("31.4 cm");
+        options73.add("28 cm");
+        options73.add("25 cm");
+        options73.add("20 cm");
+        quizzes.add(new Quiz("What is the circumference of a circle with a diameter of 10 cm? (Use π=3.14)", options73, "31.4 cm"));
+
+        // Question 24
+        List<String> options74 = new ArrayList<>();
+        options74.add("13");
+        options74.add("11");
+        options74.add("9");
+        options74.add("8");
+        quizzes.add(new Quiz("If a=2 and b=3, what is the value of a² + b²?", options74, "13"));
+
+        // Question 25
+        List<String> options75 = new ArrayList<>();
+        options75.add("90 degrees");
+        options75.add("180 degrees");
+        options75.add("30 degrees");
+        options75.add("45 degrees");
+        quizzes.add(new Quiz("The angle between the hour and minute hand of a clock at 3:00 is:", options75, "90 degrees"));
+
+        quizzes.add(new Quiz("Who is the author of 'The Diary of a Young Girl'?",
+                Arrays.asList("a) Anne Frank", "b) Mark Twain", "c) J.K. Rowling", "d) George Orwell"), "a) Anne Frank"));
+
+        quizzes.add(new Quiz("What is the main theme of the poem 'If—' by Rudyard Kipling?",
+                Arrays.asList("a) Success and failure", "b) Love and friendship", "c) War and peace", "d) Nature and beauty"), "a) Success and failure"));
+
+        quizzes.add(new Quiz("In Shakespeare's play 'Romeo and Juliet,' what are the names of the two feuding families?",
+                Arrays.asList("a) Montague and Capulet", "b) Capulet and Veron", "c) Montague and Mercutio", "d) Capulet and Paris"), "a) Montague and Capulet"));
+
+        quizzes.add(new Quiz("Which literary device involves giving human traits to non-human entities?",
+                Arrays.asList("a) Metaphor", "b) Personification", "c) Simile", "d) Alliteration"), "b) Personification"));
+
+        quizzes.add(new Quiz("What is the primary purpose of a thesis statement in an essay?",
+                Arrays.asList("a) To entertain", "b) To summarize", "c) To present the main argument", "d) To conclude"), "c) To present the main argument"));
+
+        quizzes.add(new Quiz("In the story 'The Necklace,' what does Madame Loisel lose?",
+                Arrays.asList("a) A ring", "b) A necklace", "c) A bracelet", "d) A pair of earrings"), "b) A necklace"));
+
+        quizzes.add(new Quiz("Which of the following is an example of an oxymoron?",
+                Arrays.asList("a) Bitter sweet", "b) Tall short", "c) Bright darkness", "d) Fast slow"), "a) Bitter sweet"));
+
+        quizzes.add(new Quiz("In 'The Adventures of Tom Sawyer,' what is Tom's greatest adventure?",
+                Arrays.asList("a) Finding treasure", "b) Running away from home", "c) Going to school", "d) Witnessing a murder"), "a) Finding treasure"));
+
+        quizzes.add(new Quiz("What is a synonym for 'benevolent'?",
+                Arrays.asList("a) Kind", "b) Evil", "c) Indifferent", "d) Angry"), "a) Kind"));
+
+        quizzes.add(new Quiz("Which figure of speech compares two unlike things using 'like' or 'as'?",
+                Arrays.asList("a) Metaphor", "b) Simile", "c) Hyperbole", "d) Personification"), "b) Simile"));
+
+        quizzes.add(new Quiz("What is the setting of the novel 'To Kill a Mockingbird'?",
+                Arrays.asList("a) Maycomb, Alabama", "b) New York City", "c) London", "d) Boston"), "a) Maycomb, Alabama"));
+
+        quizzes.add(new Quiz("What does the term 'theme' refer to in literature?",
+                Arrays.asList("a) The main character", "b) The underlying message", "c) The plot", "d) The setting"), "b) The underlying message"));
+
+        quizzes.add(new Quiz("Which of the following is an example of alliteration?",
+                Arrays.asList("a) She sells sea shells by the sea shore", "b) The wind whispered softly", "c) The sun shone brightly", "d) Time flies"), "a) She sells sea shells by the sea shore"));
+
+        quizzes.add(new Quiz("In which genre of literature would you typically find a plot twist?",
+                Arrays.asList("a) Romance", "b) Mystery", "c) Biography", "d) Poetry"), "b) Mystery"));
+
+        quizzes.add(new Quiz("What is the primary function of a conclusion in an essay?",
+                Arrays.asList("a) To introduce new ideas", "b) To summarize and close the argument", "c) To provide evidence", "d) To present the thesis"), "b) To summarize and close the argument"));
+
+        quizzes.add(new Quiz("In poetry, a 'stanza' is equivalent to a:",
+                Arrays.asList("a) Sentence", "b) Paragraph", "c) Chapter", "d) Line"), "b) Paragraph"));
+
+        quizzes.add(new Quiz("Which of the following is a classic novel written by F. Scott Fitzgerald?",
+                Arrays.asList("a) The Great Gatsby", "b) 1984", "c) Moby Dick", "d) Pride and Prejudice"), "a) The Great Gatsby"));
+
+        quizzes.add(new Quiz("What type of poem is typically 14 lines long?",
+                Arrays.asList("a) Haiku", "b) Limerick", "c) Sonnet", "d) Ode"), "c) Sonnet"));
+
+        quizzes.add(new Quiz("In 'Pride and Prejudice', who is Elizabeth Bennet's love interest?",
+                Arrays.asList("a) Mr. Collins", "b) Mr. Darcy", "c) Mr. Wickham", "d) Mr. Bingley"), "b) Mr. Darcy"));
+
+        quizzes.add(new Quiz("What is the main conflict in 'The Catcher in the Rye'?",
+                Arrays.asList("a) Man vs. nature", "b) Man vs. society", "c) Man vs. himself", "d) Man vs. fate"), "c) Man vs. himself"));
+
+        return quizzes;
+    }
+
+
+    public static List<Quiz> getXArtsQuizzes() {
+        List<Quiz> quizzes = new ArrayList<>();
+
+        // Question 1
+        List<String> options1 = new ArrayList<>();
+        options1.add("Pause in a sentence");
+        options1.add("Poetry");
+        options1.add("Title");
+        options1.add("End of a sentence");
+        quizzes.add(new Quiz("When is punctuation used?", options1, "End of a sentence"));
+
+        // Question 2
+        List<String> options2 = new ArrayList<>();
+        options2.add("Kavi Naresh");
+        options2.add("Kavi Hemant");
+        options2.add("Kavi Mahesh");
+        options2.add("Kavi Kailash");
+        quizzes.add(new Quiz("Who wrote 'Saraswati'?", options2, "Kavi Naresh"));
+
+        // Question 3
+        List<String> options3 = new ArrayList<>();
+        options3.add("Song");
+        options3.add("Novel");
+        options3.add("Play");
+        options3.add("Poem");
+        quizzes.add(new Quiz("What does the word 'Kavya' mean?", options3, "Poem"));
+
+        // Question 4
+        List<String> options4 = new ArrayList<>();
+        options4.add("Kantidas");
+        options4.add("Narsinh Mehta");
+        options4.add("Manibhai");
+        options4.add("A poet from South India");
+        quizzes.add(new Quiz("Who is considered the father of Gujarati literature?", options4, "Narsinh Mehta"));
+
+        // Question 5
+        List<String> options5 = new ArrayList<>();
+        options5.add("Education");
+        options5.add("Tradition");
+        options5.add("Thought");
+        options5.add("Music");
+        quizzes.add(new Quiz("What is the meaning of 'Samskar'?", options5, "Tradition"));
+
+        // Question 6
+        List<String> options6 = new ArrayList<>();
+        options6.add("Dog");
+        options6.add("Tiger");
+        options6.add("Wild animal");
+        options6.add("Fish");
+        quizzes.add(new Quiz("What does 'Harina' mean?", options6, "Wild animal"));
+
+        // Question 7
+        List<String> options7 = new ArrayList<>();
+        options7.add("Creation of poetry");
+        options7.add("Approach to thought");
+        options7.add("Beauty of language");
+        options7.add("Literary equality");
+        quizzes.add(new Quiz("What is the importance of 'Alankaran' in poetry?", options7, "Beauty of language"));
+
+        // Question 8
+        List<String> options8 = new ArrayList<>();
+        options8.add("Sun");
+        options8.add("Cloud");
+        options8.add("Sky");
+        options8.add("Horizon");
+        quizzes.add(new Quiz("What is a synonym for 'Akash' in Gujarati?", options8, "Sky"));
+
+        // Question 9
+        List<String> options9 = new ArrayList<>();
+        options9.add("A devotee");
+        options9.add("A poet");
+        options9.add("A text");
+        options9.add("A historian");
+        quizzes.add(new Quiz("Who was 'Tulsidas'?", options9, "A poet"));
+
+        // Question 10
+        List<String> options10 = new ArrayList<>();
+        options10.add("Shankar");
+        options10.add("Narsinh Mehta");
+        options10.add("Kabir");
+        options10.add("Rabindranath Tagore");
+        quizzes.add(new Quiz("Who is the author of the poem 'Vaisnav Jan To'?", options10, "Narsinh Mehta"));
+
+        // Question 11
+        List<String> options11 = new ArrayList<>();
+        options11.add("Incomplete");
+        options11.add("Complete");
+        options11.add("Inappropriate");
+        options11.add("Wrong");
+        quizzes.add(new Quiz("What does the word 'Samyak' mean?", options11, "Complete"));
+
+        // Question 12
+        List<String> options12 = new ArrayList<>();
+        options12.add("Thoughts");
+        options12.add("Opinion");
+        options12.add("Approach");
+        options12.add("Knowledge");
+        quizzes.add(new Quiz("What is the meaning of 'Abhipray'?", options12, "Opinion"));
+
+        // Question 13
+        List<String> options13 = new ArrayList<>();
+        options13.add("Beautiful");
+        options13.add("Weak");
+        options13.add("Ugly");
+        options13.add("Magnificent");
+        quizzes.add(new Quiz("What is the antonym of 'Sundar'?", options13, "Ugly"));
+
+        // Question 14
+        List<String> options14 = new ArrayList<>();
+        options14.add("Lamp");
+        options14.add("Devotee");
+        options14.add("Disciple");
+        options14.add("Ascetic");
+        quizzes.add(new Quiz("What does 'Tapsvi' mean?", options14, "Ascetic"));
+
+        // Question 15
+        List<String> options15 = new ArrayList<>();
+        options15.add("River");
+        options15.add("Water");
+        options15.add("Pond");
+        options15.add("Lake");
+        quizzes.add(new Quiz("What does 'Jal' mean?", options15, "Water"));
+
+        // Question 16
+        List<String> options16 = new ArrayList<>();
+        options16.add("Folk tale");
+        options16.add("Literature");
+        options16.add("Music");
+        options16.add("Imagination");
+        quizzes.add(new Quiz("What is poetry referred to as?", options16, "Literature"));
+
+        // Question 17
+        List<String> options17 = new ArrayList<>();
+        options17.add("Leadership");
+        options17.add("Truthfulness");
+        options17.add("Religion");
+        options17.add("Competence");
+        quizzes.add(new Quiz("What does 'Naitikta' mean?", options17, "Truthfulness"));
+
+        // Question 18
+        List<String> options18 = new ArrayList<>();
+        options18.add("Vision");
+        options18.add("Example");
+        options18.add("Lack of vision");
+        options18.add("Visionary");
+        quizzes.add(new Quiz("What does 'Drashti' mean?", options18, "Vision"));
+
+        // Question 19
+        List<String> options19 = new ArrayList<>();
+        options19.add("Language");
+        options19.add("Reality");
+        options19.add("Creativity");
+        options19.add("Composition");
+        quizzes.add(new Quiz("What is the significance of 'Shabd' (word)?", options19, "Language"));
+
+        // Question 20
+        List<String> options20 = new ArrayList<>();
+        options20.add("Teaching");
+        options20.add("Knowledge");
+        options20.add("Study");
+        options20.add("Curriculum");
+        quizzes.add(new Quiz("What does 'Shikshan' mean?", options20, "Teaching"));
+
+        // Question 21
+        List<String> options21 = new ArrayList<>();
+        options21.add("Sorrow");
+        options21.add("Pain");
+        options21.add("Hatred");
+        options21.add("Severity");
+        quizzes.add(new Quiz("What is the antonym of 'Prem'?", options21, "Hatred"));
+
+        // Question 22
+        List<String> options22 = new ArrayList<>();
+        options22.add("Poetry");
+        options22.add("Story");
+        options22.add("Song");
+        options22.add("Narrative");
+        quizzes.add(new Quiz("What does 'Gatha' mean?", options22, "Story"));
+
+        // Question 23
+        List<String> options23 = new ArrayList<>();
+        options23.add("Sanskrit");
+        options23.add("Hindi");
+        options23.add("Gujarati");
+        options23.add("English");
+        quizzes.add(new Quiz("In which language is 'Dev' referenced?", options23, "Sanskrit"));
+
+        // Question 24
+        List<String> options24 = new ArrayList<>();
+        options24.add("Old");
+        options24.add("New ideas");
+        options24.add("Wealth");
+        options24.add("Tradition");
+        quizzes.add(new Quiz("What does 'Aadhunikta' mean?", options24, "New ideas"));
+
+        // Question 25
+        List<String> options25 = new ArrayList<>();
+        options25.add("Respect");
+        options25.add("Insult");
+        options25.add("Indifference");
+        options25.add("Disregard");
+        quizzes.add(new Quiz("What is the antonym of 'Aadar'?", options25, "Insult"));
+
+        List<String> options26 = new ArrayList<>();
+        options26.add("Right to Property");
+        options26.add("Right to Equality");
+        options26.add("Right to Work");
+        options26.add("Right to Education");
+        quizzes.add(new Quiz("Which of the following is a fundamental right in India?", options26, "Right to Equality"));
+
+        // Question 3
+        List<String> options27 = new ArrayList<>();
+        options27.add("1912");
+        options27.add("1914");
+        options27.add("1916");
+        options27.add("1918");
+        quizzes.add(new Quiz("The First World War began in which year?", options27, "1914"));
+
+        // Question 4
+        List<String> options28 = new ArrayList<>();
+        options28.add("USA and Japan");
+        options28.add("USA and USSR");
+        options28.add("China and India");
+        options28.add("France and Germany");
+        quizzes.add(new Quiz("The term 'Cold War' refers to the tension between which two groups?", options28, "USA and USSR"));
+
+        // Question 5
+        List<String> options29 = new ArrayList<>();
+        options29.add("1885");
+        options29.add("1905");
+        options29.add("1915");
+        options29.add("1920");
+        quizzes.add(new Quiz("The Indian National Congress was founded in which year?", options29, "1885"));
+
+        // Question 6
+        List<String> options30 = new ArrayList<>();
+        options30.add("Industrial growth");
+        options30.add("Agricultural productivity");
+        options30.add("Urban development");
+        options30.add("Environmental conservation");
+        quizzes.add(new Quiz("What does the term 'Green Revolution' refer to?", options30, "Agricultural productivity"));
+
+        // Question 7
+        List<String> options31 = new ArrayList<>();
+        options31.add("Article 15");
+        options31.add("Article 17");
+        options31.add("Article 21");
+        options31.add("Article 25");
+        quizzes.add(new Quiz("Which article of the Indian Constitution provides for the abolition of untouchability?", options31, "Article 17"));
+
+        // Question 8
+        List<String> options32 = new ArrayList<>();
+        options32.add("Sardar Patel");
+        options32.add("Jawaharlal Nehru");
+        options32.add("Mahatma Gandhi");
+        options32.add("Lal Bahadur Shastri");
+        quizzes.add(new Quiz("Who was the first Prime Minister of India?", options32, "Jawaharlal Nehru"));
+
+        // Question 9
+        List<String> options33 = new ArrayList<>();
+        options33.add("Mumbai");
+        options33.add("Kolkata");
+        options33.add("New Delhi");
+        options33.add("Bengaluru");
+        quizzes.add(new Quiz("What is the capital of India?", options33, "New Delhi"));
+
+        // Question 10
+        List<String> options34 = new ArrayList<>();
+        options34.add("1915");
+        options34.add("1919");
+        options34.add("1920");
+        options34.add("1930");
+        quizzes.add(new Quiz("The 'Rowlatt Act' was enacted in which year?", options34, "1919"));
+
+        // Question 11
+        List<String> options35 = new ArrayList<>();
+        options35.add("Non-Cooperation Movement");
+        options35.add("Civil Disobedience Movement");
+        options35.add("Quit India Movement");
+        options35.add("Salt March");
+        quizzes.add(new Quiz("Which movement was launched by Mahatma Gandhi in 1920?", options35, "Non-Cooperation Movement"));
+
+        // Question 12
+        List<String> options36 = new ArrayList<>();
+        options36.add("January 1, 1950");
+        options36.add("January 26, 1950");
+        options36.add("March 15, 1950");
+        options36.add("August 15, 1947");
+        quizzes.add(new Quiz("The Constitution of India came into effect on which date?", options36, "January 26, 1950"));
+
+        // Question 13
+        List<String> options37 = new ArrayList<>();
+        options37.add("Centralization of power");
+        options37.add("Division of powers");
+        options37.add("Unitary system");
+        options37.add("Single-tier government");
+        quizzes.add(new Quiz("Which of the following is a feature of a federal government?", options37, "Division of powers"));
+
+        // Question 14
+        List<String> options38 = new ArrayList<>();
+        options38.add("Urban development");
+        options38.add("Rural employment");
+        options38.add("Industrial growth");
+        options38.add("Educational reform");
+        quizzes.add(new Quiz("What is the primary objective of the 'Mahatma Gandhi National Rural Employment Guarantee Act (MGNREGA)'?", options38, "Rural employment"));
+
+        // Question 15
+        List<String> options39 = new ArrayList<>();
+        options39.add("France");
+        options39.add("USA");
+        options39.add("England");
+        options39.add("Germany");
+        quizzes.add(new Quiz("The Industrial Revolution began in which country?", options39, "England"));
+
+        // Question 16
+        List<String> options40 = new ArrayList<>();
+        options40.add("B.R. Ambedkar");
+        options40.add("Mahatma Gandhi");
+        options40.add("Jawaharlal Nehru");
+        options40.add("Sardar Patel");
+        quizzes.add(new Quiz("Who is known as the 'Father of the Indian Constitution'?", options40, "B.R. Ambedkar"));
+
+        // Question 17
+        List<String> options41 = new ArrayList<>();
+        options41.add("Battle of Plassey");
+        options41.add("Battle of Buxar");
+        options41.add("Battle of Panipat");
+        options41.add("Battle of Haldighati");
+        quizzes.add(new Quiz("Which battle marked the beginning of British rule in India?", options41, "Battle of Plassey"));
+
+        // Question 18
+        List<String> options42 = new ArrayList<>();
+        options42.add("1920");
+        options42.add("1930");
+        options42.add("1942");
+        options42.add("1947");
+        quizzes.add(new Quiz("The 'Civil Disobedience Movement' was launched in which year?", options42, "1930"));
+
+        // Question 19
+        List<String> options43 = new ArrayList<>();
+        options43.add("Solar energy");
+        options43.add("Wind energy");
+        options43.add("Coal");
+        options43.add("Biomass");
+        quizzes.add(new Quiz("Which of the following is a non-renewable resource?", options43, "Coal"));
+
+        // Question 20
+        List<String> options44 = new ArrayList<>();
+        options44.add("1945");
+        options44.add("1950");
+        options44.add("1960");
+        options44.add("1970");
+        quizzes.add(new Quiz("The United Nations was established in which year?", options44, "1945"));
+
+        // Question 21
+        List<String> options45 = new ArrayList<>();
+        options45.add("High Court");
+        options45.add("Supreme Court");
+        options45.add("District Court");
+        options45.add("Tribunal");
+        quizzes.add(new Quiz("Which is the highest judicial authority in India?", options45, "Supreme Court"));
+
+        // Question 22
+        List<String> options46 = new ArrayList<>();
+        options46.add("Non-violent resistance");
+        options46.add("Armed rebellion");
+        options46.add("Silent protest");
+        options46.add("Economic boycott");
+        quizzes.add(new Quiz("The term 'Satyagraha' means:", options46, "Non-violent resistance"));
+
+        // Question 23
+        List<String> options47 = new ArrayList<>();
+        options47.add("Single party rule");
+        options47.add("Free and fair elections");
+        options47.add("Centralized power");
+        options47.add("Limited citizen participation");
+        quizzes.add(new Quiz("Which is a main feature of democracy?", options47, "Free and fair elections"));
+
+        // Question 24
+        List<String> options48 = new ArrayList<>();
+        options48.add("Taxation");
+        options48.add("Loans");
+        options48.add("Foreign aid");
+        options48.add("Investments");
+        quizzes.add(new Quiz("Which is the main source of income for the government of India?", options48, "Taxation"));
+
+        // Question 25
+        List<String> options49 = new ArrayList<>();
+        options49.add("1920s");
+        options49.add("1930s");
+        options49.add("1940s");
+        options49.add("1950s");
+        quizzes.add(new Quiz("The Great Depression occurred in which decade?", options49, "1930s"));
+
+        // Question 26
+        List<String> options50 = new ArrayList<>();
+        options50.add("Bhagat Singh");
+        options50.add("Subhas Chandra Bose");
+        options50.add("Rajendra Prasad");
+        options50.add("Sardar Vallabhbhai Patel");
+        quizzes.add(new Quiz("Who was the leader of the Indian National Army (INA)?", options50, "Subhas Chandra Bose"));
+
+        // English Quiz
+        quizzes.add(new Quiz("Who is the author of 'The Diary of a Young Girl'?",
+                Arrays.asList("a) Anne Frank", "b) Mark Twain", "c) J.K. Rowling", "d) George Orwell"), "a) Anne Frank"));
+
+        quizzes.add(new Quiz("What is the main theme of the poem 'If—' by Rudyard Kipling?",
+                Arrays.asList("a) Success and failure", "b) Love and friendship", "c) War and peace", "d) Nature and beauty"), "a) Success and failure"));
+
+        quizzes.add(new Quiz("In Shakespeare's play 'Romeo and Juliet,' what are the names of the two feuding families?",
+                Arrays.asList("a) Montague and Capulet", "b) Capulet and Veron", "c) Montague and Mercutio", "d) Capulet and Paris"), "a) Montague and Capulet"));
+
+        quizzes.add(new Quiz("Which literary device involves giving human traits to non-human entities?",
+                Arrays.asList("a) Metaphor", "b) Personification", "c) Simile", "d) Alliteration"), "b) Personification"));
+
+        quizzes.add(new Quiz("What is the primary purpose of a thesis statement in an essay?",
+                Arrays.asList("a) To entertain", "b) To summarize", "c) To present the main argument", "d) To conclude"), "c) To present the main argument"));
+
+        quizzes.add(new Quiz("In the story 'The Necklace,' what does Madame Loisel lose?",
+                Arrays.asList("a) A ring", "b) A necklace", "c) A bracelet", "d) A pair of earrings"), "b) A necklace"));
+
+        quizzes.add(new Quiz("Which of the following is an example of an oxymoron?",
+                Arrays.asList("a) Bitter sweet", "b) Tall short", "c) Bright darkness", "d) Fast slow"), "a) Bitter sweet"));
+
+        quizzes.add(new Quiz("In 'The Adventures of Tom Sawyer,' what is Tom's greatest adventure?",
+                Arrays.asList("a) Finding treasure", "b) Running away from home", "c) Going to school", "d) Witnessing a murder"), "a) Finding treasure"));
+
+        quizzes.add(new Quiz("What is a synonym for 'benevolent'?",
+                Arrays.asList("a) Kind", "b) Evil", "c) Indifferent", "d) Angry"), "a) Kind"));
+
+        quizzes.add(new Quiz("Which figure of speech compares two unlike things using 'like' or 'as'?",
+                Arrays.asList("a) Metaphor", "b) Simile", "c) Hyperbole", "d) Personification"), "b) Simile"));
+
+        quizzes.add(new Quiz("What is the setting of the novel 'To Kill a Mockingbird'?",
+                Arrays.asList("a) Maycomb, Alabama", "b) New York City", "c) London", "d) Boston"), "a) Maycomb, Alabama"));
+
+        quizzes.add(new Quiz("What does the term 'theme' refer to in literature?",
+                Arrays.asList("a) The main character", "b) The underlying message", "c) The plot", "d) The setting"), "b) The underlying message"));
+
+        quizzes.add(new Quiz("Which of the following is an example of alliteration?",
+                Arrays.asList("a) She sells sea shells by the sea shore", "b) The wind whispered softly", "c) The sun shone brightly", "d) Time flies"), "a) She sells sea shells by the sea shore"));
+
+        quizzes.add(new Quiz("In which genre of literature would you typically find a plot twist?",
+                Arrays.asList("a) Romance", "b) Mystery", "c) Biography", "d) Poetry"), "b) Mystery"));
+
+        quizzes.add(new Quiz("What is the primary function of a conclusion in an essay?",
+                Arrays.asList("a) To introduce new ideas", "b) To summarize and close the argument", "c) To provide evidence", "d) To present the thesis"), "b) To summarize and close the argument"));
+
+        quizzes.add(new Quiz("In poetry, a 'stanza' is equivalent to a:",
+                Arrays.asList("a) Sentence", "b) Paragraph", "c) Chapter", "d) Line"), "b) Paragraph"));
+
+        quizzes.add(new Quiz("Which of the following is a classic novel written by F. Scott Fitzgerald?",
+                Arrays.asList("a) The Great Gatsby", "b) 1984", "c) Moby Dick", "d) Pride and Prejudice"), "a) The Great Gatsby"));
+
+        quizzes.add(new Quiz("What type of poem is typically 14 lines long?",
+                Arrays.asList("a) Haiku", "b) Limerick", "c) Sonnet", "d) Ode"), "c) Sonnet"));
+
+        quizzes.add(new Quiz("In 'Pride and Prejudice', who is Elizabeth Bennet's love interest?",
+                Arrays.asList("a) Mr. Collins", "b) Mr. Darcy", "c) Mr. Wickham", "d) Mr. Bingley"), "b) Mr. Darcy"));
+
+        quizzes.add(new Quiz("What is the main conflict in 'The Catcher in the Rye'?",
+                Arrays.asList("a) Man vs. nature", "b) Man vs. society", "c) Man vs. himself", "d) Man vs. fate"), "c) Man vs. himself"));
+
+// Sanskrit Quiz
+        quizzes.add(new Quiz("राम is which type of noun?",
+                Arrays.asList("a) Proper noun", "b) Common noun", "c) Abstract noun", "d) Collective noun"), "a) Proper noun"));
+
+        quizzes.add(new Quiz("What is the meaning of 'गच्छ'?",
+                Arrays.asList("a) To come", "b) To go", "c) To sit", "d) To speak"), "b) To go"));
+
+        quizzes.add(new Quiz("The feminine form of 'पुस्तक' is:",
+                Arrays.asList("a) पुस्तकम्", "b) पुस्तकाः", "c) पुस्तक", "d) पुस्तकं"), "b) पुस्तकाः"));
+
+        quizzes.add(new Quiz("What does 'अहं' mean?",
+                Arrays.asList("a) You", "b) He", "c) I", "d) They"), "c) I"));
+
+        quizzes.add(new Quiz("What is the plural form of 'शिक्षक'?",
+                Arrays.asList("a) शिक्षकम्", "b) शिक्षिकाः", "c) शिक्षकाः", "d) शिक्षके"), "c) शिक्षकाः"));
+
+        quizzes.add(new Quiz("The word 'क्रीडति' means:",
+                Arrays.asList("a) To play", "b) To read", "c) To write", "d) To listen"), "a) To play"));
+
+        quizzes.add(new Quiz("What is the antonym of 'सूर्यः'?",
+                Arrays.asList("a) चन्द्र", "b) तारा", "c) रात्रि", "d) दिन"), "a) चन्द्र"));
+
+        quizzes.add(new Quiz("Who is the author of 'रामायण'?",
+                Arrays.asList("a) वेदव्यास", "b) वाल्मीकि", "c) कालीदास", "d) भवभूति"), "b) वाल्मीकि"));
+
+        quizzes.add(new Quiz("What is the meaning of 'भवान्'?",
+                Arrays.asList("a) You", "b) I", "c) He", "d) They"), "a) You"));
+
+        quizzes.add(new Quiz("What is the plural form of 'जल'?",
+                Arrays.asList("a) जलानि", "b) जलम्", "c) जलाः", "d) जलम्"), "a) जलानि"));
+
+        quizzes.add(new Quiz("The word 'शान्ति' means:",
+                Arrays.asList("a) War", "b) Peace", "c) Struggle", "d) Noise"), "b) Peace"));
+
+        quizzes.add(new Quiz("What is the meaning of 'कुतः'?",
+                Arrays.asList("a) Where", "b) Why", "c) What", "d) When"), "b) Why"));
+
+        quizzes.add(new Quiz(" 'गायति' translates to:",
+                Arrays.asList("a) To hear", "b) To sing", "c) To speak", "d) To play"), "b) To sing"));
+
+        quizzes.add(new Quiz("The antonym of 'सुख' is:",
+                Arrays.asList("a) दुख", "b) आनंद", "c) शांति", "d) प्रेम"), "a) दुख"));
+
+        quizzes.add(new Quiz("What does 'सर्वे' mean?",
+                Arrays.asList("a) Some", "b) All", "c) Any", "d) One"), "b) All"));
+
+        quizzes.add(new Quiz(" 'नग्न' translates to:",
+                Arrays.asList("a) To dress", "b) Naked", "c) To run", "d) To hide"), "b) Naked"));
+
+        quizzes.add(new Quiz("What does 'विद्या' mean?",
+                Arrays.asList("a) Ignorance", "b) Knowledge", "c) Wealth", "d) Power"), "b) Knowledge"));
+
+        quizzes.add(new Quiz("The antonym of 'अधम' is:",
+                Arrays.asList("a) उत्तम", "b) मध्यम", "c) सामान्य", "d) निःसंदेह"), "a) उत्तम"));
+
+        quizzes.add(new Quiz("What is the meaning of 'सत्य'?",
+                Arrays.asList("a) Truth", "b) Falsehood", "c) Justice", "d) Freedom"), "a) Truth"));
 
         return quizzes;
     }
