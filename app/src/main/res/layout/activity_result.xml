@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="@color/lavender"
+    android:background="@drawable/pagebkg"
     android:padding="16dp">
 
     <!-- TextView to display the final score and result -->

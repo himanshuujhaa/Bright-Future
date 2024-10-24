@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".VideoFragment"
-    android:background="@color/lavender">
-<!--    android:background="@drawable/pagebkg">-->
+    android:background="@drawable/pagebkg">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
