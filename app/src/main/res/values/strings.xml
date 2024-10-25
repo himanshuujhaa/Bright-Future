@@ -81,7 +81,7 @@
     </string-array>
 
     <string-array name="hobby_array">
-        <item>Select Your Hobby</item>
+        <item>Select Your Interest</item>
         <item>Science</item>
         <item>Commerce</item>
         <item>Arts</item>
